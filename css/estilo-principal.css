@@ -1,0 +1,72 @@
+﻿@import url("_core/css/temas_colores_fuentes.css");
+
+body {
+   background-color: var(--dark-color-acento-2);
+}
+
+a {
+   text-decoration: none;
+}
+
+.logo {
+   width: 65px;
+   height: 65px;
+   border-radius: 100%;
+   object-fit: fill;
+}
+
+#encabezado-principal {
+   background-color: inherit;
+   color: var(--dark-color-texto);
+   font-family: "Rubik";
+   font-style: italic;
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+#lista-categorias li {
+   color: var(--dark-color-acento-2);
+}
+
+
+#navegacion-categoria {
+   background-color: var(--dark-color-acento-1);
+   padding: 10px;
+}
+
+.tab-categoria {
+   color: var(--light-color-acento-3);
+   font-family: "Martel";
+   font-size: 20px;
+}
+
+#seccion-categoria {
+   margin: 50px auto;
+   width: 95%;
+}
+
+.articulo-categoria {
+   /* border: solid 3px var(--light-color-acento-1); */
+   color: var(--dark-color-texto);
+   font-family: "Roboto Slab";
+}
+
+.item-valor-portada {
+   width: 250px;
+   height: 350px;
+   object-fit: fill;
+}
+
+
+#footer-principal {
+   background-color: var(--dark-color-acento-1);
+   color: var(--dark-color-texto);
+   padding: 20px;
+}
+
+#qr-code {
+   width: 100px;
+   height: 100px;
+}
