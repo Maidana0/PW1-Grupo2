@@ -64,6 +64,7 @@ a {
    background-color: var(--dark-color-acento-1);
    color: var(--dark-color-texto);
    padding: 20px;
+   font-family: "Rubik";
 }
 
 #qr-code {
