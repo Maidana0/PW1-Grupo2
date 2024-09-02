@@ -4,7 +4,7 @@ body {
    background-color: var(--dark-color-acento-2);
 }
 
-a {
+a { 
    text-decoration: none;
 }
 
@@ -70,4 +70,10 @@ a {
 #qr-code {
    width: 100px;
    height: 100px;
+}
+
+.item-valor-nombre{
+   font-size:30px;
+   font-weight:600;
+   text-decoration: underline;
 }
