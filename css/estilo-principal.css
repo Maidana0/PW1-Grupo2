@@ -1,6 +1,4 @@
-﻿@import url("_core/css/temas_colores_fuentes.css");
-
-body {
+﻿body {
    background-color: var(--dark-color-acento-2);
 }
 
@@ -62,9 +60,10 @@ a {
 
 #footer-principal {
    background-color: var(--dark-color-acento-1);
-   color: var(--dark-color-texto);
+   color: var(--dark-color-acento-2);
+   font-family: "Martel";
+   font-size: 12px;
    padding: 20px;
-   font-family: "Rubik";
 }
 
 #qr-code {
@@ -77,3 +76,5 @@ a {
    font-weight:600;
    text-decoration: underline;
 }
+
+
