@@ -2,7 +2,7 @@
    background-color: var(--dark-color-acento-2);
 }
 
-a { 
+a {
    text-decoration: none;
 }
 
@@ -24,8 +24,8 @@ a {
    gap: 10px;
 }
 
-#lista-categorias li {
-   color: var(--dark-color-acento-2);
+#lista-categorias {
+   color: var(--light-color-acento-3);
 }
 
 
@@ -35,7 +35,7 @@ a {
 }
 
 .tab-categoria {
-   color: var(--light-color-acento-3);
+   color: inherit;
    font-family: "Martel";
    font-size: 20px;
 }
@@ -46,21 +46,20 @@ a {
 }
 
 .articulo-categoria {
-   /* border: solid 3px var(--light-color-acento-1); */
    color: var(--dark-color-texto);
    font-family: "Roboto Slab";
 }
 
 .item-valor-portada {
    width: 250px;
-   height: 350px;
+   height: 355px;
    object-fit: fill;
 }
 
 
 #footer-principal {
    background-color: var(--dark-color-acento-1);
-   color: var(--dark-color-acento-2);
+   color: var(--light-color-acento-3);
    font-family: "Martel";
    font-size: 12px;
    padding: 20px;
@@ -71,10 +70,8 @@ a {
    height: 100px;
 }
 
-.item-valor-nombre{
-   font-size:30px;
-   font-weight:600;
+.item-valor-nombre {
+   font-size: 30px;
+   font-weight: 600;
    text-decoration: underline;
 }
-
-
