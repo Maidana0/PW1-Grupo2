@@ -7,10 +7,10 @@ let linksCategorias = document.querySelectorAll("a.tab-categoria");
 
 linksCategorias.forEach((linkCategoria) => {
    linkCategoria.addEventListener("click", () => {
-      libros.forEach((item) => {
-         const { Categoria, Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
+      const librosFiltrados = libros.filter((libro) => libro.Categoria === linkCategoria.innerText)
 
-         if (linkCategoria.innerText != Categoria) return;
+      librosFiltrados.forEach((item) => {
+         const { Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
          const articuloContenedor = document.querySelector("article." + Id.split("-")[1])
 
          articuloContenedor.getElementsByClassName("item-valor-nombre")[0].innerText = Nombre
