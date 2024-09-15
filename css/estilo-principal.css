@@ -22,10 +22,19 @@ a {
    display: flex;
    align-items: center;
    gap: 10px;
+   
+}
+.buscador{
+   margin-left: auto;
 }
 
 #lista-categorias {
    color: var(--light-color-acento-3);
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 10px;
 }
 
 
@@ -38,6 +47,12 @@ a {
    color: inherit;
    font-family: "Martel";
    font-size: 20px;
+   
+   
+}
+.tab-categoria:hover{
+   color: var(--dark-color-acento-2);
+   text-decoration: underline;
 }
 
 #seccion-categoria {
@@ -63,6 +78,9 @@ a {
    font-family: "Martel";
    font-size: 12px;
    padding: 20px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
 }
 
 #qr-code {
