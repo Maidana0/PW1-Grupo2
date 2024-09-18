@@ -9,28 +9,41 @@
    <link rel="stylesheet" href="../css/estilo-principal.css">
    <link rel="stylesheet" href="../css/estilos-encabezado.css">
    <link rel="stylesheet" href="../_core/css/temas_colores_fuentes.css">
+   <link rel="stylesheet" href="../css/estilos-recuperar-password.css">
 </head>
 
 <body>
-   <header id="encabezado-principal"></header>
-   <img src="../assets/img/logo.png" class="logo" alt="logo">
-   <a class="nombre-del-sitio" href="../index.html">
-      La casa de los libros
-   </a>
-   <form class="buscador" action="">
-      <input type="text">
-   </form>
-
-   <div class="d-flex menu-usuario">
-      <a href="./iniciar-sesion.html">
-         Iniciar Sesión
+   <header id="encabezado-principal">
+      <img src="../assets/img/logo.png" class="logo" alt="logo">
+      <a class="nombre-del-sitio" href="../index.html">
+         La casa de los libros
       </a>
-      <a href="./registrarse.html">
-         Registrarse
-      </a>
-   </div>
+      <form class="buscador" action="">
+         <input type="text">
+      </form>
 
+      <div class="d-flex menu-usuario">
+         <a href="./iniciar-sesion.html">
+            Iniciar Sesión
+         </a>
+         <a href="./registrarse.html">
+            Registrarse
+         </a>
+      </div>
    </header>
+   <main>
+      <form action="" class="d-flex formulario">
+         <h1>¿Olvidaste tu contraseña?</h1>
+         <p>Ingresa el email con el que te registraste y te enviaremos los pasos a seguir para generar una nueva
+            Contraseña </p>
+         <div class="d-flex contenedor-de-inputs">
+            <input type="text" placeholder="Correo Electronico*">
+         </div>
+         <p> <small>  Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
+            y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
+         <button>Continuar</button>
+      </form>
+   </main>
 </body>
 
 </html>
