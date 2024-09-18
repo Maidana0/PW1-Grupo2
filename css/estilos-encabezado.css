@@ -1,0 +1,37 @@
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    object-fit: fill;
+}
+
+#encabezado-principal {
+    background-color: inherit;
+    color: var(--dark-color-texto);
+    font-family: "Rubik";
+    font-style: italic;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nombre-del-sitio {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.buscador {
+    margin: auto;
+}
+
+.menu-usuario {
+    gap: 22px;
+    font-size: 20px;
+}
+
+.menu-usuario a:hover {
+    color: var(--dark-color-acento-3);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
