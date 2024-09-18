@@ -1,31 +1,20 @@
-﻿body {
+﻿* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;  
+}
+
+body {
    background-color: var(--dark-color-acento-2);
 }
 
 a {
    text-decoration: none;
+   color: var(--dark-text-color);
 }
 
-.logo {
-   width: 65px;
-   height: 65px;
-   border-radius: 100%;
-   object-fit: fill;
-}
-
-#encabezado-principal {
-   background-color: inherit;
-   color: var(--dark-color-texto);
-   font-family: "Rubik";
-   font-style: italic;
-   padding: 10px;
+.d-flex {
    display: flex;
-   align-items: center;
-   gap: 10px;
-   
-}
-.buscador{
-   margin-left: auto;
 }
 
 #lista-categorias {
@@ -47,10 +36,11 @@ a {
    color: inherit;
    font-family: "Martel";
    font-size: 20px;
-   
-   
+
+
 }
-.tab-categoria:hover{
+
+.tab-categoria:hover {
    color: var(--dark-color-acento-2);
    text-decoration: underline;
 }
@@ -63,6 +53,14 @@ a {
 .articulo-categoria {
    color: var(--dark-color-texto);
    font-family: "Roboto Slab";
+   align-items: center;
+   justify-content: space-evenly;
+   width: 80%;
+   margin: 45px auto;
+   border-radius: 12px;
+   border: solid 1px var(--dark-color-acento-3);
+   flex-direction: column;
+   padding: 40px;
 }
 
 .item-valor-portada {
