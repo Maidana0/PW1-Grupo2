@@ -17,8 +17,12 @@
 }
 
 .contenedor-de-inputs input {
-    min-height: 35px;
+    min-height: 40px;
     padding: 8px;
+    border: solid 2.5px transparent;
+    border-radius: 8px;
+    background-color: var(--light-color-acento-3);
+    outline: none;
 }
 
 .formulario a {
@@ -29,14 +33,19 @@
 .formulario button {
     background: var(--dark-color-acento-3);
     color: var(--dark-color-acento-2);
-    padding: 8px;
+    padding: 10px;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     width: 80%;
     margin: auto;
+    font-weight: bolder;
 }
 
 .formulario p {
     font-size: 0.9em;
 
+}
+
+.contenedor-de-inputs input:invalid {
+    border-color: rgb(196, 3, 3);
 }
