@@ -10,7 +10,7 @@
     color: var(--dark-color-texto);
     font-family: "Rubik";
     font-style: italic;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -23,6 +23,24 @@
 
 .buscador {
     margin: auto;
+}
+
+.buscador input {
+    min-height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: var(--dark-color-texto);
+    transition: ease background-color .2s;
+}
+
+.buscador input:focus,
+.buscador input:hover {
+    border: solid 1px var(--dark-color-acento-3);
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
 .menu-usuario {
