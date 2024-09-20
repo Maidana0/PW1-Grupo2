@@ -1,7 +1,7 @@
 ﻿/* URL Paleta de colores LIGHT: https://www.coloreasily.com/?colors=100704-ffffff-ebb2c2-f6f0df-f9e7ec */
 /* URL Paleta de colores DARK: https://www.coloreasily.com/?colors=ffffff-1c1719-a55072-5b1a35-d080a2 */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Martel");
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto Slab");
 
 :root {
@@ -15,6 +15,9 @@
    --dark-color-acento-1: #a55072;
    --dark-color-acento-2: #5b1a35;
    --dark-color-acento-3: #d080a2;
+
+   --dark-color-hipervinculo: #ebb6d4;
+   /* --dark-color-hipervinculo: #310058; CAMBIE ESTA VARIABLE xd */
 }
 
 .light-theme {

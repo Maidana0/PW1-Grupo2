@@ -11,10 +11,7 @@
    <meta name="application-name" content="La casa de los libros" />
 
    <!-- Autores -->
-   <meta name="author" content="Deanna, Gina">
-   <meta name="author" content="Maidana, Franco">
-   <meta name="author" content="Ruedas, Lara">
-   <meta name="author" content="Programación Web 1 - UNLaM">
+   <meta name="author" content="Deanna Gina, Maidana Franco, Ruedas Lara, Programación Web 1 - UNLaM">
 
    <!-- Descripción y palabras clave -->
    <meta name="description"
@@ -23,30 +20,50 @@
       content="libros, lectura, arte, ciencia, ficción, terror, derecho, deportes, divulgación científica, diseño, recreación, fantasía, unlam, UNLaM, Universidad Nacional de La Matanza, Programación Web I, Web 1, 2024, Programación UNLaM, Desarrollo Web">
 
    <!-- Logo -->
-   <link rel="icon" type="image/ico" href="assets/img/favicon.ico" />
-   <link rel="apple-touch-icon" sizes="32x32" href="assets/img/favicon.ico">
-   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo-180.ico">
-   <link rel="apple-touch-icon" sizes="256x256" href="assets/img/logo-256.png">
-
+   <link rel="icon" type="image/ico" href="assets/icon/favicon.ico" />
+   <link rel="apple-touch-icon" sizes="32x32" href="assets/icon/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo-180.ico">
+   <link rel="apple-touch-icon" sizes="256x256" href="assets/icon/logo-256.ico">
 
    <!-- Open Graph -->
-   <meta name="og:title" content="La casa de los libros" />
-   <meta name="og:description"
-      content="Sumérgete en un mundo de historias fascinantes. Encuentra en nuestro catálogo una selección única de libros" />
-   <meta name="og:site_name" content="La casa de los libros" />
-   <meta name="og:type" content="website" />
+   <meta property="og:title" content="La casa de los libros" />
+   <meta property="og:description"
+      content="Sumérgete en un mundo de historias fascinantes. Encuentra en nuestro catálogo una selección única de libros." />
+   <meta property="og:site_name" content="La casa de los libros" />
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://maidana0.github.io/PW1-Grupo2/" />
+   <meta property="og:image" content="https://maidana0.github.io/PW1-Grupo2/assets/icon/logo-256.ico" />
+
+   <!-- Robots -->
+   <meta name="robots" content="index, follow">
 
    <!-- Estilos -->
    <link rel="stylesheet" href="css/estilo-principal.css">
+   <link rel="stylesheet" href="css/estilos-encabezado.css">
    <link rel="stylesheet" href="_core/css/temas_colores_fuentes.css">
 </head>
 
 <body>
    <header id="encabezado-principal">
       <img src="assets/img/logo.png" class="logo" alt="logo">
-      <h1>La casa de los libros</h1>
+      <a class="nombre-del-sitio" href="#">
+         La casa de los libros
+      </a>
+      <form class="buscador" action="">
+         <input type="text">
+      </form>
       <!-- <h1>ENCABEZADO PRINCIPAL, PRIMERA LINEA --- LOGO+BUSCADOR+ICONOS</h1>
       <h1>ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</h1> -->
+
+      <div class="d-flex menu-usuario">
+         <a href="html/iniciar-sesion.html">
+            Iniciar Sesión
+         </a>
+         <a href="html/registrarse.html">
+            Registrarse
+         </a>
+      </div>
+
    </header>
 
    <main>
@@ -77,13 +94,13 @@
       </section>
 
       <section id="seccion-categoria">
-         <!-- <article style="display:none;" id="categoria00-item01" class="articulo-categoria"> -->
-         <article id="categoria00-item01" class="articulo-categoria item01">
+         <!-- <article style="display:none;" id="categoria00-item01" class="d-flex articulo-categoria"> -->
+         <article id="categoria00-item01" class="d-flex articulo-categoria item01">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 1</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item01.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item01.png' alt='Imagen de Portada'>
                <!-- <p class="item-valor-portada">Imagen de Portada</p> -->
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
@@ -102,12 +119,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item02" class="articulo-categoria item02">
+         <article id="categoria00-item02" class="d-flex articulo-categoria item02">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 2</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item02.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item02.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -125,12 +142,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item03" class="articulo-categoria item03">
+         <article id="categoria00-item03" class="d-flex articulo-categoria item03">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 3</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item03.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item03.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -148,12 +165,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item04" class="articulo-categoria item04">
+         <article id="categoria00-item04" class="d-flex articulo-categoria item04">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 4</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item04.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item04.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -171,12 +188,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item05" class="articulo-categoria item05">
+         <article id="categoria00-item05" class="d-flex articulo-categoria item05">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 5</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item05.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item05.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -194,12 +211,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item06" class="articulo-categoria item06">
+         <article id="categoria00-item06" class="d-flex articulo-categoria item06">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 6</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item06.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item06.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -217,12 +234,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item07" class="articulo-categoria item07">
+         <article id="categoria00-item07" class="d-flex articulo-categoria item07">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 7</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item07.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item07.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -240,12 +257,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item08" class="articulo-categoria item08">
+         <article id="categoria00-item08" class="d-flex articulo-categoria item08">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 8</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item08.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item08.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -263,12 +280,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item09" class="articulo-categoria item09">
+         <article id="categoria00-item09" class="d-flex articulo-categoria item09">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 9</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item09.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item09.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
@@ -286,12 +303,12 @@
             </div>
          </article>
 
-         <article id="categoria00-item10" class="articulo-categoria item10">
+         <article id="categoria00-item10" class="d-flex articulo-categoria item10">
             <header class="header-articulo">
                <p class="item-valor-nombre">Valor del Nombre ITEM 10</p>
                <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" src='assets/img/categoria00-item10.png'
-                  alt='Imagen de Portada'>
+               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                  src='assets/img/categoria00-item10.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion">Valor de la Descripcion</p>
                <p class="item-valor-rating">Valor de Rating</p>
             </header>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registrarse</title>
+
+   <meta name="theme-color" content="#5b1a35" />
+   <link rel="icon" type="image/ico" href="../assets/icon/favicon.ico" />
+   <link rel="apple-touch-icon" sizes="32x32" href="../assets/icon/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon/logo-180.ico">
+   <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
+
+   <link rel="stylesheet" href="../css/estilo-principal.css">
+   <link rel="stylesheet" href="../css/estilos-encabezado.css">
+   <link rel="stylesheet" href="../_core/css/temas_colores_fuentes.css">
+   <link rel="stylesheet" href="../css/estilos-registrarse.css">
+</head>
+
+<body>
+   <header id="encabezado-principal">
+      <img src="../assets/img/logo.png" class="logo" alt="logo">
+      <a class="nombre-del-sitio" href="../index.html">
+         La casa de los libros
+      </a>
+      <form class="buscador" action="">
+         <input type="text">
+      </form>
+      <!-- <h1>ENCABEZADO PRINCIPAL, PRIMERA LINEA --- LOGO+BUSCADOR+ICONOS</h1>
+      <h1>ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</h1> -->
+
+      <div class="d-flex menu-usuario">
+         <a href="./iniciar-sesion.html">
+            Iniciar Sesión
+         </a>
+         <a href="./registrarse.html">
+            Registrarse
+         </a>
+      </div>
+
+   </header>
+   <main>
+
+      <form class="d-flex formulario">
+         <h1> Registrarse </h1>
+         <div class="d-flex contenedor-de-inputs">
+            <input name="email" autocomplete="email" type="email" required placeholder="Correo electrónico*">
+
+            <input name="password" autocomplete="off" type="password" minlength="6" required placeholder="Contraseña*">
+         </div>
+
+         <button> Registrate </button>
+
+         <p> ¿Ya tenés una cuenta?<a href="iniciar-sesion.html"> Iniciar sesión </a></p>
+
+         <p> <small> Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
+               y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
+      </form>
+   </main>
+
+   <footer id="footer-principal">
+      <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
+      <div id="footer-principal-centro">
+         <img id="qr-code" src="../assets/img/qr.png" alt="codigo-qr" />
+      </div>
+      <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</section>
+   </footer>
+</body>
+
+</html>

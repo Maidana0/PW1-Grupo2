@@ -1,31 +1,34 @@
-﻿body {
+﻿* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
    background-color: var(--dark-color-acento-2);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   max-width: 100vw;
+   min-height: 100vh;
 }
 
 a {
    text-decoration: none;
+   color: var(--dark-text-color);
 }
 
-.logo {
-   width: 65px;
-   height: 65px;
-   border-radius: 100%;
-   object-fit: fill;
-}
-
-#encabezado-principal {
-   background-color: inherit;
-   color: var(--dark-color-texto);
-   font-family: "Rubik";
-   font-style: italic;
-   padding: 10px;
+.d-flex {
    display: flex;
-   align-items: center;
-   gap: 10px;
 }
 
 #lista-categorias {
    color: var(--light-color-acento-3);
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 10px;
 }
 
 
@@ -38,6 +41,13 @@ a {
    color: inherit;
    font-family: "Martel";
    font-size: 20px;
+
+
+}
+
+.tab-categoria:hover {
+   color: var(--dark-color-acento-2);
+   text-decoration: underline;
 }
 
 #seccion-categoria {
@@ -48,6 +58,14 @@ a {
 .articulo-categoria {
    color: var(--dark-color-texto);
    font-family: "Roboto Slab";
+   align-items: center;
+   justify-content: space-evenly;
+   width: 80%;
+   margin: 45px auto;
+   border-radius: 12px;
+   border: solid 1px var(--dark-color-acento-3);
+   flex-direction: column;
+   padding: 40px;
 }
 
 .item-valor-portada {
@@ -63,6 +81,9 @@ a {
    font-family: "Martel";
    font-size: 12px;
    padding: 20px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
 }
 
 #qr-code {
@@ -74,4 +95,18 @@ a {
    font-size: 30px;
    font-weight: 600;
    text-decoration: underline;
+}
+
+h1 {
+   font-family: 'Rubik';
+   font-size: 30px
+}
+
+h2 {
+   font-family: 'Martel';
+   font-weight: 800;
+}
+
+input {
+   font-family: 'Roboto Slab';
 }

@@ -1,0 +1,110 @@
+﻿h1 {
+    color: var(--dark-color-texto);
+}
+
+main {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.items-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    color: var(--dark-color-texto);
+    padding: 40px 30px;
+    margin: 20px auto 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 26px;
+    border-radius: 15px;
+    box-shadow: inset -1.5px -1.5px 3px var(--dark-color-acento-3);
+}
+
+.formulario h2 {
+    color: var(--dark-color-acento-3);
+    padding: 2px 15px;
+    border-bottom: solid 1px var(--dark-color-acento-3);
+    border-radius: 18px;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+select,
+input {
+    min-height: 40px;
+    padding: 8px;
+    border: solid 2.5px transparent;
+    border-radius: 4px;
+    outline: none;
+}
+
+.formulario button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bolder;
+    color: var(--dark-color-acento-2);
+    max-height: 36px;
+    width: 200px;
+    transition: all ease .25s;
+    border: solid 2px transparent;
+}
+
+.formulario button[type="submit"] {
+    background: var(--dark-color-acento-3);
+    color: var(--dark-color-acento-2);
+}
+
+.formulario button[type="submit"]:hover {
+    color: var(--dark-color-acento-3);
+    background-color: transparent;
+    border-color: var(--dark-color-acento-3);
+}
+
+.contenedor-de-inputs {
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.label-contenedor {
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+    font-family: 'Martel';
+    width: 220px;
+    text-wrap: nowrap;
+}
+
+.label-contenedor span {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+@media (width <=780px) {
+    .formulario {
+        max-width: 96%;
+    }
+
+    .label-contenedor {
+        width: 260px;
+    }
+
+    .contenedor-de-inputs {
+        flex-wrap: wrap;
+    }
+
+    .contenedor-de-inputs {
+        justify-content: center;
+    }
+
+    .formulario button[type="submit"] {
+        margin: auto;
+    }
+}
