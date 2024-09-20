@@ -45,9 +45,9 @@
       <form class="d-flex formulario">
          <h1> Iniciar Sesión</h1>
          <div class="d-flex contenedor-de-inputs">
-            <input name="email" type="email" required placeholder="Correo electrónico*">
+            <input name="email" type="email" autocomplete="email" required placeholder="Correo electrónico*">
 
-            <input name="password" type="password" minlength="6" required placeholder="Contraseña*">
+            <input name="password" type="password" autocomplete="off" minlength="6" required placeholder="Contraseña*">
          </div>
          <a href="recuperar-contrasena.html">
             ¿Olvidaste tu contraseña?
@@ -60,6 +60,14 @@
          <p> <small> Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
                y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
       </form>
+
+      <!-- ESTO ES TEMPORAL -->
+      <div
+         style="margin: 0 20px 30px auto;padding:12px; border-radius: 16px; background-color: brown; color: #fff; width: fit-content;">
+         <a href="./datos-personales.html">Ir a datos personales</a>
+      </div>
+      <!-- --- -->
+
    </main>
    <footer id="footer-principal">
       <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>

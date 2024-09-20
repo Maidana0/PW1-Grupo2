@@ -96,3 +96,17 @@ a {
    font-weight: 600;
    text-decoration: underline;
 }
+
+h1 {
+   font-family: 'Rubik';
+   font-size: 30px
+}
+
+h2 {
+   font-family: 'Martel';
+   font-weight: 800;
+}
+
+input {
+   font-family: 'Roboto Slab';
+}
