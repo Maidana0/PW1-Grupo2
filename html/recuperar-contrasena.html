@@ -6,6 +6,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Recuperar Contraseña</title>
 
+   <meta name="theme-color" content="#5b1a35" />
+   <link rel="icon" type="image/ico" href="../assets/icon/favicon.ico" />
+   <link rel="apple-touch-icon" sizes="32x32" href="../assets/icon/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon/logo-180.ico">
+   <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
+
    <link rel="stylesheet" href="../css/estilo-principal.css">
    <link rel="stylesheet" href="../css/estilos-encabezado.css">
    <link rel="stylesheet" href="../_core/css/temas_colores_fuentes.css">
@@ -37,13 +43,20 @@
          <p>Ingresa el email con el que te registraste y te enviaremos los pasos a seguir para generar una nueva
             Contraseña </p>
          <div class="d-flex contenedor-de-inputs">
-            <input type="text" placeholder="Correo Electronico*">
+            <input type="email" name="email" autocomplete="email" placeholder="Correo Electronico*" required>
          </div>
-         <p> <small>  Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
-            y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
+         <p> <small> Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
+               y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
          <button>Continuar</button>
       </form>
    </main>
+   <footer id="footer-principal">
+      <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
+      <div id="footer-principal-centro">
+         <img id="qr-code" src="../assets/img/qr.png" alt="codigo-qr" />
+      </div>
+      <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</section>
+   </footer>
 </body>
 
 </html>

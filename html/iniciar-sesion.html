@@ -6,6 +6,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Iniciar Sesión</title>
 
+   <meta name="theme-color" content="#5b1a35" />
+   <link rel="icon" type="image/ico" href="../assets/icon/favicon.ico" />
+   <link rel="apple-touch-icon" sizes="32x32" href="../assets/icon/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon/logo-180.ico">
+   <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
+
    <link rel="stylesheet" href="../_core/css/temas_colores_fuentes.css">
    <link rel="stylesheet" href="../css/estilo-principal.css">
    <link rel="stylesheet" href="../css/estilos-encabezado.css">
@@ -39,9 +45,9 @@
       <form class="d-flex formulario">
          <h1> Iniciar Sesión</h1>
          <div class="d-flex contenedor-de-inputs">
-            <input type="text" placeholder="Correo electrónico*">
+            <input name="email" type="email" autocomplete="email" required placeholder="Correo electrónico*">
 
-            <input type="password" placeholder="Contraseña*">
+            <input name="password" type="password" autocomplete="off" minlength="6" required placeholder="Contraseña*">
          </div>
          <a href="recuperar-contrasena.html">
             ¿Olvidaste tu contraseña?
@@ -51,10 +57,25 @@
 
          <p> ¿No tienes cuenta?<a href="registrarse.html"> Regístrate </a></p>
 
-         <p> <small>  Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
-            y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
+         <p> <small> Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
+               y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
       </form>
+
+      <!-- ESTO ES TEMPORAL -->
+      <div
+         style="margin: 0 20px 30px auto;padding:12px; border-radius: 16px; background-color: brown; color: #fff; width: fit-content;">
+         <a href="./datos-personales.html">Ir a datos personales</a>
+      </div>
+      <!-- --- -->
+
    </main>
+   <footer id="footer-principal">
+      <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
+      <div id="footer-principal-centro">
+         <img id="qr-code" src="../assets/img/qr.png" alt="codigo-qr" />
+      </div>
+      <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</section>
+   </footer>
 </body>
 
 </html>

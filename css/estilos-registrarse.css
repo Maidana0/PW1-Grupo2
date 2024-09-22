@@ -1,6 +1,6 @@
 ﻿.formulario {
     width: 350px;
-    margin: 30px auto;
+    margin: auto;
     padding: 30px 20px;
     flex-direction: column;
     gap: 20px;
@@ -8,7 +8,7 @@
     border-radius: 12px;
     color: var(--dark-color-texto);
     background-color: var(--dark-color-acento-1);
-    text-align: center; 
+    text-align: center;
 }
 
 .contenedor-de-inputs {
@@ -17,26 +17,35 @@
 }
 
 .contenedor-de-inputs input {
-    min-height: 35px;
+    min-height: 40px;
     padding: 8px;
+    border: solid 2.5px transparent;
+    border-radius: 8px;
+    background-color: var(--light-color-acento-3);
+    outline: none;
 }
 
-.formulario a{
-  text-decoration:underline;  
-  color: var(--dark-color-hipervinculo);
+.formulario a {
+    text-decoration: underline;
+    color: var(--dark-color-hipervinculo);
 }
 
-.formulario button{
-background: var(--dark-color-acento-3);
-color: var(--dark-color-acento-2);
-padding: 8px;
-border: none;
-border-radius: 12px;
-width: 80%;
-margin: auto;
+.formulario button {
+    background: var(--dark-color-acento-3);
+    color: var(--dark-color-acento-2);
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+    font-weight: bolder;
 }
 
-.formulario p{
-font-size: 0.9em;
-  
+.formulario p {
+    font-size: 0.9em;
+
+}
+
+.contenedor-de-inputs input:invalid {
+    border-color: rgb(196, 3, 3);
 }
