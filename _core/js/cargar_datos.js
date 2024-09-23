@@ -7,12 +7,15 @@ let linksCategorias = document.querySelectorAll("a.tab-categoria");
 
 linksCategorias.forEach((linkCategoria) => {
    linkCategoria.addEventListener("click", () => {
-      const librosFiltrados = libros.filter((libro) => libro.Categoria === linkCategoria.innerText)
+      const elementosFiltrados = libros.filter((libro) => libro.Categoria === linkCategoria.innerText)
 
-      librosFiltrados.forEach((item) => {
+      elementosFiltrados.forEach((item) => {
          const { Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
          const articuloContenedor = document.querySelector("article." + Id.split("-")[1])
 
+         // Es para que el nombre completo se vea en el tooltip del navegador
+         articuloContenedor.getElementsByClassName("item-valor-nombre")[0].setAttribute("title", Nombre)
+         // ---
          articuloContenedor.getElementsByClassName("item-valor-nombre")[0].innerText = Nombre
          articuloContenedor.getElementsByClassName("item-valor-autor")[0].innerText = Autor
          articuloContenedor.getElementsByClassName("item-valor-portada")[0].src = Portada
