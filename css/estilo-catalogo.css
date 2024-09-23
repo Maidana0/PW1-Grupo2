@@ -1,51 +1,57 @@
 #lista-categorias {
-    color: var(--light-color-acento-3);
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 15px 5px;
-    padding: 10px;
-    width: 90%;
-    margin: auto;
- }
- 
- .tab-categoria {
-    font-family: "Martel";
-    font-size: 16px;
-    display: block;
-    border: 3px solid;
-    border-color: var(--dark-color-acento-1);
-    border-radius: 0.3em;
-    padding: 15px;
-    background-color: var(--dark-color-acento-1);
- }
- 
- .tab-categoria:hover {
-    color: var(--dark-color-acento-2);
-    text-decoration: underline;
- }
- 
- #seccion-categoria {
-    margin: 50px auto;
- 
- }
- 
- .articulo-categoria {
-    color: var(--dark-color-texto);
-    font-family: "Roboto Slab";
-    justify-content: space-evenly;
-    width: 80%;
-    margin: 45px auto;
-    border-radius: 12px;
-    border: solid 1px var(--dark-color-acento-3);
-    flex-direction: column;
-    padding: 40px;
- }
- 
- .item-valor-portada {
-    width: 250px;
-    height: 355px;
-    object-fit: fill;
- }
+   color: var(--light-color-acento-3);
+   list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+   gap: 15px 5px;
+   padding: 10px;
+   width: 90%;
+   margin: auto;
+}
+
+.tab-categoria {
+   font-family: "Martel";
+   font-size: 16px;
+   display: block;
+   border: 3px solid;
+   border-color: var(--dark-color-acento-1);
+   border-radius: 0.3em;
+   padding: 15px;
+   background-color: var(--dark-color-acento-1);
+}
+
+.tab-categoria:hover {
+   color: var(--dark-color-acento-2);
+   text-decoration: underline;
+}
+
+#seccion-categoria {
+   margin: 50px auto;
+
+}
+
+.articulo-categoria {
+   color: var(--dark-color-texto);
+   font-family: "Roboto Slab";
+   justify-content: space-evenly;
+   width: 80%;
+   margin: 45px auto;
+   border-radius: 12px;
+   border: solid 1px var(--dark-color-acento-3);
+   flex-direction: column;
+   padding: 40px;
+}
+
+.item-valor-portada {
+   width: 250px;
+   height: 355px;
+   object-fit: fill;
+}
+
+.item-valor-nombre {
+   font-size: 30px;
+   font-weight: 600;
+   text-decoration: underline;
+}
