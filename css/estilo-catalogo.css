@@ -110,3 +110,35 @@
       background-color: rgba(0, 0, 0, 0.9);
    }
 }
+
+
+@media (width <=980px) {
+   #lista-categorias {
+      width: 100%;
+   }
+
+   .articulo-categoria {
+      width: 300px;
+   }
+
+   .item-valor-descripcion {
+      width: 298px;
+      height: 320px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
+
+   .contenido {
+      flex-direction: column;
+   }
+
+   .detalle-articulo{
+      display: none;
+   }
+
+   .item-valor-portada {
+      width: 298px;
+      object-fit: cover;
+      border-top-right-radius: 12px;
+   }
+}
