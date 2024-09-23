@@ -1,10 +1,12 @@
 ﻿h1 {
     color: var(--dark-color-texto);
+    font-family: 'Martel';
+    text-align: center;
 }
 
 main {
     width: fit-content;
-    margin: 20px auto;
+    margin: 20px auto 40px;
 }
 
 .items-center {
@@ -14,21 +16,20 @@ main {
 
 .formulario {
     color: var(--dark-color-texto);
-    padding: 40px 30px;
-    margin: 20px auto 40px;
+    margin: 0 auto 40px;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 26px;
     border-radius: 15px;
-    box-shadow: inset -1.5px -1.5px 3px var(--dark-color-acento-3);
 }
 
 .formulario h2 {
     color: var(--dark-color-acento-3);
-    padding: 2px 15px;
+    padding: 15px;
     border-bottom: solid 1px var(--dark-color-acento-3);
     border-radius: 18px;
     font-size: 25px;
+    font-family: 'Rubik';
     margin-bottom: 15px;
 }
 
