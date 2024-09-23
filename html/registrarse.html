@@ -6,6 +6,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Registrarse</title>
 
+   <meta name="theme-color" content="#5b1a35" />
+   <link rel="icon" type="image/ico" href="../assets/icon/favicon.ico" />
+   <link rel="apple-touch-icon" sizes="32x32" href="../assets/icon/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="../assets/icon/logo-180.ico">
+   <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
 
    <link rel="stylesheet" href="../css/estilo-principal.css">
    <link rel="stylesheet" href="../css/estilos-encabezado.css">
@@ -40,17 +45,17 @@
       <form class="d-flex formulario">
          <h1> Registrarse </h1>
          <div class="d-flex contenedor-de-inputs">
-            <input type="text" placeholder="Correo electrónico*">
+            <input name="email" autocomplete="email" type="email" required placeholder="Correo electrónico*">
 
-            <input type="password" placeholder="Contraseña*">
+            <input name="password" autocomplete="off" type="password" minlength="6" required placeholder="Contraseña*">
          </div>
 
          <button> Registrate </button>
 
          <p> ¿Ya tenés una cuenta?<a href="iniciar-sesion.html"> Iniciar sesión </a></p>
 
-         <p> <small>  Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
-            y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
+         <p> <small> Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
+               y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
       </form>
    </main>
 
