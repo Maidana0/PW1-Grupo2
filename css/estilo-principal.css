@@ -45,9 +45,8 @@ a {
 }
 
 .footer-columna span {
-   gap: 5px;
+   gap: 8px;
    align-items: center;
-
 }
 
 #qr-code {
@@ -65,9 +64,16 @@ button {
    cursor: pointer;
 }
 
+.red-social-icono {
+   margin-top: 10px;
+   filter: grayscale(90%) brightness(70%);
+   transition: all .35s ease;
 
-
-
+   &&:hover {
+      filter: grayscale(0%) brightness(100%);
+      transform: scale(1.15);
+   }
+}
 
 
 @media (width<=780px) {
