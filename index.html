@@ -39,12 +39,11 @@
 
    <!-- Estilos -->
    <link rel="stylesheet" href="css/estilo-principal.css">
-   <link rel="stylesheet" href="css/estilos-encabezado.css">
-   <link rel="stylesheet" href="_core/css/temas_colores_fuentes.css">
+   <link rel="stylesheet" href="css/estilo-catalogo.css">
 </head>
 
 <body>
-   <header id="encabezado-principal">
+   <header id="encabezado-principal" class="d-flex">
       <img src="assets/img/logo.png" class="logo" alt="logo">
       <a class="nombre-del-sitio" href="#">
          La casa de los libros
@@ -68,7 +67,6 @@
 
    <main>
       <nav id="navegacion-categoria">
-
          <ul id="lista-categorias">
             <li>
                <a href="#" id="tab-categoria-1" class="tab-categoria">Arte, Arquitectura y Diseño</a>
@@ -86,268 +84,304 @@
                <a href="#" id="tab-categoria-5" class="tab-categoria">Fantasía, Ciencia ficción y Terror</a>
             </li>
          </ul>
-
-
       </nav>
 
       <section id="seccion-filtros">
       </section>
 
-      <section id="seccion-categoria">
-         <!-- <article style="display:none;" id="categoria00-item01" class="d-flex articulo-categoria"> -->
-         <article id="categoria00-item01" class="d-flex articulo-categoria item01">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 1</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item01.png' alt='Imagen de Portada'>
-               <!-- <p class="item-valor-portada">Imagen de Portada</p> -->
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+      <section id="seccion-categoria" class="d-flex">
+         <article id="categoria00-item01" class=" articulo-categoria item01">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item01.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 1</p>
          </article>
 
-         <article id="categoria00-item02" class="d-flex articulo-categoria item02">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 2</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item02.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item02" class=" articulo-categoria item02">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item02.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 2</p>
          </article>
 
-         <article id="categoria00-item03" class="d-flex articulo-categoria item03">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 3</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item03.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item03" class=" articulo-categoria item03">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item03.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 3</p>
          </article>
 
-         <article id="categoria00-item04" class="d-flex articulo-categoria item04">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 4</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item04.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item04" class=" articulo-categoria item04">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item04.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 4</p>
          </article>
 
-         <article id="categoria00-item05" class="d-flex articulo-categoria item05">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 5</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item05.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item05" class=" articulo-categoria item05">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item05.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 5</p>
          </article>
 
-         <article id="categoria00-item06" class="d-flex articulo-categoria item06">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 6</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item06.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item06" class=" articulo-categoria item06">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item06.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 6</p>
          </article>
 
-         <article id="categoria00-item07" class="d-flex articulo-categoria item07">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 7</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item07.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item07" class=" articulo-categoria item07">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item07.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 7</p>
          </article>
 
-         <article id="categoria00-item08" class="d-flex articulo-categoria item08">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 8</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item08.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item08" class=" articulo-categoria item08">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item08.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 8</p>
          </article>
 
-         <article id="categoria00-item09" class="d-flex articulo-categoria item09">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 9</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item09.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item09" class=" articulo-categoria item09">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item09.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 9</p>
          </article>
 
-         <article id="categoria00-item10" class="d-flex articulo-categoria item10">
-            <header class="header-articulo">
-               <p class="item-valor-nombre">Valor del Nombre ITEM 10</p>
-               <p class="item-valor-autor">Valor del Autor</p>
-               <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
-                  src='assets/img/categoria00-item10.png' alt='Imagen de Portada'>
-               <p class="item-valor-descripcion">Valor de la Descripcion</p>
-               <p class="item-valor-rating">Valor de Rating</p>
-            </header>
-            <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
-               <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
-               <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
-               <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
-               <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
-               <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
-               <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
-               <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
-               <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
-               <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+         <article id="categoria00-item10" class=" articulo-categoria item10">
+            <p class="item-valor-descripcion">Valor de la Descripcion</p>
+            <div class="d-flex contenido">
+               <header class="header-articulo">
+                  <img class="item-valor-portada" width="250px" height="355px" loading="lazy"
+                     src='assets/img/categoria00-item10.png' alt='Imagen de Portada'>
+                  <p class="item-valor-autor">Valor del Autor</p>
+               </header>
+               <div class="d-flex detalle-articulo">
+                  <h4>Rating:</h4>
+                  <p class="item-valor-rating">Valor de Rating</p>
+                  <h4 class="item-campo-personalizado_1">NOMBRE de Campo Personalizado 1</h4>
+                  <p class="item-valor-personalizado_1">VALOR de Campo Personalizado 1</p>
+                  <h4 class="item-campo-personalizado_2">NOMBRE de Campo Personalizado 2</h4>
+                  <p class="item-valor-personalizado_2">VALOR de Campo Personalizado 2</p>
+                  <h4 class="item-campo-personalizado_3">NOMBRE de Campo Personalizado 3</h4>
+                  <p class="item-valor-personalizado_3">VALOR de Campo Personalizado 3</p>
+                  <h4 class="item-campo-personalizado_4">NOMBRE de Campo Personalizado 4</h4>
+                  <p class="item-valor-personalizado_4">VALOR de Campo Personalizado 4</p>
+                  <h4 class="item-campo-personalizado_5">NOMBRE de Campo Personalizado 5</h4>
+                  <p class="item-valor-personalizado_5">VALOR de Campo Personalizado 5</p>
+               </div>
             </div>
+            <p class="item-valor-nombre">Valor del Nombre ITEM 10</p>
          </article>
       </section>
    </main>
 
    <footer id="footer-principal" class="d-flex">
-      <div class="footer-columna d-flex" >
-         <h3>Contactanos</h3> 
+      <div class="footer-columna d-flex">
+         <h3>Contactanos</h3>
          <span class="d-flex">
             <img src="./assets/icon/footer/telefono.svg" alt="telefono">+54 911 1234 xxx
          </span>
          <span class="d-flex">
-            <img src="./assets/icon/footer/mail_20dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt="mail">lacasalibros@gmail.com
+            <img src="./assets/icon/footer/mail_20dp_000000_FILL0_wght300_GRAD0_opsz24.svg"
+               alt="mail">lacasalibros@gmail.com
          </span>
       </div>
-      
+
       <div class="footer-columna">
          <img id="qr-code" src="assets/img/qr.png" alt="codigo-qr" />
       </div>
       <div class="footer-columna">
          <h3>Redes Sociales</h3>
          <span class="d-flex">
-            <img src="./assets/icon/footer/facebook_2168281.png" alt="facebook" width="28px">
-            <img src="./assets/icon/footer/instagram_4494468.png" alt="instagram" width="28px">
-            <img src="./assets/icon/footer/linkedin.png" alt="linkedin" width="28px">
+            <a href="#">
+               <img class="red-social-icono" src="./assets/icon/footer/facebook.png" alt="facebook" width="30px"
+                  height="30px">
+            </a>
+            <a href="#">
+               <img class="red-social-icono" src="./assets/icon/footer/instagram.png" alt="instagram" width="30px"
+                  height="30px">
+            </a>
+            <a href="#">
+               <img class="red-social-icono" src="./assets/icon/footer/linkedin.png" alt="linkedin" width="30px"
+                  height="30px">
+            </a>
          </span>
       </div>
    </footer>
