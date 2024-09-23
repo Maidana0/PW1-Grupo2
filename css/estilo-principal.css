@@ -1,4 +1,7 @@
-﻿* {
+﻿@import "../_core/css/temas_colores_fuentes.css";
+@import "./estilos-encabezado.css";
+
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -22,67 +25,25 @@ a {
    display: flex;
 }
 
-#lista-categorias {
-   color: var(--light-color-acento-3);
-   list-style: none;
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   gap: 10px;
-}
-
-
-#navegacion-categoria {
-   background-color: var(--dark-color-acento-1);
-   padding: 10px;
-}
-
-.tab-categoria {
-   color: inherit;
-   font-family: "Martel";
-   font-size: 20px;
-
-
-}
-
-.tab-categoria:hover {
-   color: var(--dark-color-acento-2);
-   text-decoration: underline;
-}
-
-#seccion-categoria {
-   margin: 50px auto;
-   width: 95%;
-}
-
-.articulo-categoria {
-   color: var(--dark-color-texto);
-   font-family: "Roboto Slab";
-   align-items: center;
-   justify-content: space-evenly;
-   width: 80%;
-   margin: 45px auto;
-   border-radius: 12px;
-   border: solid 1px var(--dark-color-acento-3);
-   flex-direction: column;
-   padding: 40px;
-}
-
-.item-valor-portada {
-   width: 250px;
-   height: 355px;
-   object-fit: fill;
-}
-
-
 #footer-principal {
    background-color: var(--dark-color-acento-1);
    color: var(--light-color-acento-3);
    font-family: "Martel";
    font-size: 12px;
-   padding: 20px;
-   display: flex;
+   padding: 16px;
    justify-content: space-around;
+   align-items: start;
+   padding-top: 30px;
+}
+
+.footer-columna {
+   flex-direction: column;
+   gap: 5px;
+   font-size: 15px;
+}
+
+.footer-columna span {
+   gap: 8px;
    align-items: center;
 }
 
@@ -91,22 +52,24 @@ a {
    height: 100px;
 }
 
-.item-valor-nombre {
-   font-size: 30px;
-   font-weight: 600;
-   text-decoration: underline;
+button {
+   cursor: pointer;
 }
 
-h1 {
-   font-family: 'Rubik';
-   font-size: 30px
+.red-social-icono {
+   margin-top: 10px;
+   filter: grayscale(90%) brightness(70%);
+   transition: all .35s ease;
+
+   &&:hover {
+      filter: grayscale(0%) brightness(100%);
+      transform: scale(1.15);
+   }
 }
 
-h2 {
-   font-family: 'Martel';
-   font-weight: 800;
-}
 
-input {
-   font-family: 'Roboto Slab';
+@media (width<=780px) {
+   .footer-columna {
+      font-size: 12px;
+   }
 }

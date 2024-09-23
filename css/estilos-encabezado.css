@@ -1,6 +1,6 @@
 .logo {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     object-fit: fill;
 }
@@ -9,17 +9,16 @@
     background-color: inherit;
     color: var(--dark-color-texto);
     font-family: "Rubik";
-    font-style: italic;
-    padding: 15px;
-    display: flex;
+    padding: 10px 15px;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .nombre-del-sitio {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
 }
+
 
 .buscador {
     margin: auto;
@@ -29,27 +28,45 @@
     min-height: 40px;
     width: 300px;
     border-radius: 8px;
-    padding: 8px;
-    outline: none;
+    padding: 8px 35px 8px 8px; 
+    outline: solid 1px #ffffff2f;
     border: none;
     background-color: rgba(0, 0, 0, 0.26);
     color: var(--dark-color-texto);
     transition: ease background-color .2s;
+    background-image: url('../assets/icon/lupaBuscador.svg'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px; 
 }
 
 .buscador input:focus,
 .buscador input:hover {
-    border: solid 1px var(--dark-color-acento-3);
+    outline: solid 1px var(--dark-color-acento-3);
     background-color: rgba(0, 0, 0, 0.5)
 }
 
 .menu-usuario {
     gap: 22px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .menu-usuario a:hover {
     color: var(--dark-color-acento-3);
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+@media (width<=780px){
+    .buscador input{
+        width: 100px;
+    }
+    .nombre-del-sitio{
+        font-size: 18px;
+    }
+    .menu-usuario{
+        font-size: 13px;
+        text-wrap: nowrap;
+        gap: 6px;
+    }
 }

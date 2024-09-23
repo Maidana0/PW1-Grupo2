@@ -13,13 +13,11 @@
    <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
 
    <link rel="stylesheet" href="../css/estilo-principal.css">
-   <link rel="stylesheet" href="../css/estilos-encabezado.css">
-   <link rel="stylesheet" href="../_core/css/temas_colores_fuentes.css">
    <link rel="stylesheet" href="../css/estilos-registrarse.css">
 </head>
 
 <body>
-   <header id="encabezado-principal">
+   <header id="encabezado-principal" class="d-flex">
       <img src="../assets/img/logo.png" class="logo" alt="logo">
       <a class="nombre-del-sitio" href="../index.html">
          La casa de los libros
@@ -59,12 +57,38 @@
       </form>
    </main>
 
-   <footer id="footer-principal">
-      <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
-      <div id="footer-principal-centro">
+   <footer id="footer-principal" class="d-flex">
+      <div class="footer-columna d-flex">
+         <h3>Contactanos</h3>
+         <span class="d-flex">
+            <img src="../assets/icon/footer/telefono.svg" alt="telefono">+54 911 1234 xxx
+         </span>
+         <span class="d-flex">
+            <img src="../assets/icon/footer/mail_20dp_000000_FILL0_wght300_GRAD0_opsz24.svg"
+               alt="mail">lacasalibros@gmail.com
+         </span>
+      </div>
+
+      <div class="footer-columna">
          <img id="qr-code" src="../assets/img/qr.png" alt="codigo-qr" />
       </div>
-      <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</section>
+      <div class="footer-columna">
+         <h3>Redes Sociales</h3>
+         <span class="d-flex">
+            <a href="#">
+               <img class="red-social-icono" src="../assets/icon/footer/facebook.png" alt="facebook" width="30px"
+                  height="30px">
+            </a>
+            <a href="#">
+               <img class="red-social-icono" src="../assets/icon/footer/instagram.png" alt="instagram" width="30px"
+                  height="30px">
+            </a>
+            <a href="#">
+               <img class="red-social-icono" src="../assets/icon/footer/linkedin.png" alt="linkedin" width="30px"
+                  height="30px">
+            </a>
+         </span>
+      </div>
    </footer>
 </body>
 
