@@ -43,15 +43,16 @@
       <form class="d-flex formulario">
          <h1> Iniciar Sesión</h1>
          <div class="d-flex contenedor-de-inputs">
-            <input name="email" type="email" autocomplete="email" required placeholder="Correo electrónico*">
-
-            <input name="password" type="password" autocomplete="off" minlength="6" required placeholder="Contraseña*">
+            <input id="email" name="email" autocomplete="email" type="text" placeholder="Correo electrónico*">
+            <label id="mensaje-email" for="email"> </label>
+            <input id="contrasenia" name="password" autocomplete="off" type="password" placeholder="Contraseña*">
+            <label id="mensaje-contrasenia" for="contrasenia"> </label>
          </div>
          <a href="recuperar-contrasena.html">
             ¿Olvidaste tu contraseña?
          </a>
 
-         <button> Iniciar Sesión </button>
+         <button id="boton"> Iniciar Sesión </button>
 
          <p> ¿No tienes cuenta?<a href="registrarse.html"> Regístrate </a></p>
 
@@ -100,6 +101,7 @@
          </span>
       </div>
    </footer>
+   <script src="../js/validaciones.js"></script>
 </body>
 
 </html>
