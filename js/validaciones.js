@@ -1,15 +1,14 @@
 const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
 const regexContrasenia = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
 const formulario = document.getElementById("formulario-aut");
-const inputEmail = formulario.getElementById("email");
-const inputContrasenia = formulario.getElementById("contrasenia");
-const labelEmail = formulario.getElementById("mensaje-email");
-const labelContrasenia = formulario.getElementById("mensaje-contrasenia");
-const botonRegistrarse = formulario.getElementById("boton");
+const inputEmail = document.getElementById("email");
+const inputContrasenia = document.getElementById("contrasenia");
+const labelEmail = document.getElementById("mensaje-email");
+const labelContrasenia = document.getElementById("mensaje-contrasenia");
+const botonRegistrarse = document.getElementById("boton");
 let errors;
 let mensajesErrorEmail;
 let mensajesErrorContrasenia;
-
 
 
 formulario.addEventListener("submit", (e) => {
@@ -28,13 +27,16 @@ formulario.addEventListener("submit", (e) => {
 formulario.addEventListener("input", (e) => {
     if (!inputEmail.value.trim() == "" && !inputContrasenia.value.trim() == "") {
         botonRegistrarse.disabled = false;
+       
     }
+
 })
 
 function validacionEmail() {
     if (inputEmail.value.trim() == "") {
         errors = true
         mensajesErrorEmail += "Este campo es obligatorio.-"
+        
     }
     else if (!regexEmail.test(inputEmail.value)) {
         errors = true
