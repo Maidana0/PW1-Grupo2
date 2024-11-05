@@ -47,5 +47,5 @@
 }
 
 .contenedor-de-inputs input:invalid {
-    border-color: rgb(196, 3, 3);
+    border-color: rgb(234, 8, 8);
 }
