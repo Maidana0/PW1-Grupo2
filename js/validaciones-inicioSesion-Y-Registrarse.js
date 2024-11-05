@@ -1,5 +1,5 @@
-const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
-// /^[a-zA-Z0-9._.]+\@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+//const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
+const regexEmail = /^[a-zA-Z0-9._.]+\@[a-zA-Z0-9.-]+\.(com|net|org)$/;
 const regexContrasenia = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#!%?$])[A-Za-z\d#!%?$]{8,12}$/;
 const formulario = document.getElementById("formulario-aut");
 const inputEmail = document.getElementById("email");
@@ -29,44 +29,64 @@ formulario.addEventListener("submit", (e) => {
 
 
 formulario.addEventListener("input", (e) => {
+    const mensajeAnteriorErrorEmail = document.getElementById("mensajeErrorEmail");
+    const mensajeAnteriorErrorContrasenia = document.getElementById("mensajeErrorContrasenia");
 
+    
     if (inputEmail.value.trim() !== "" && inputContrasenia.value.trim() !== "") {
         botonRegistrarse.disabled = false;
         
-    } if (inputEmail.value.trim() !== ""){
+    } else if (inputEmail.value.trim() == "" && inputContrasenia.value.trim() == ""){
+        botonRegistrarse.disabled = true;
+    }
+
+
+
+    if (inputEmail.value.trim() !== ""){
         inputEmail.style.borderColor = "";
-    } if (inputContrasenia.value.trim() !== ""){
+    } 
+    if (inputContrasenia.value.trim() !== ""){
         inputContrasenia.style.borderColor = "";
+
     }
     
     else {
         if (inputEmail.value.trim() == "") {
             inputEmail.style.borderColor = "red";
-            
+            if (mensajeAnteriorErrorEmail){
+                mensajeAnteriorErrorEmail.remove();
+            }
         }
         if (inputContrasenia.value.trim() == "") {
             inputContrasenia.style.borderColor = "red";
-            
+            if (mensajeAnteriorErrorContrasenia){
+                mensajeAnteriorErrorContrasenia.remove();
+            }
         }
     }
+    
 
-    const spanViejo = document.getElementById("mensajeAdvertencia");
-    if (spanViejo) {
-        spanViejo.remove();
 
+
+    const spanAnteriorAvertenciaContrasenia = document.getElementById("mensajeAdvertencia");
+    
+    if (spanAnteriorAvertenciaContrasenia) {
+        spanAnteriorAvertenciaContrasenia.remove();
     }
+    
     if (inputContrasenia.value.trim() !== "") {
         
-
+            if (document.getElementById("registrarse")){
             const span = document.createElement("span");
             span.id = "mensajeAdvertencia"
-            const mensajeAdvertenciaContrasenia = "La contraseña debe tener entre 8 y 12 caracteres, y ademas contener al menos una mayúscula, una minúscula, un número, y cualquiera de los siguientes caracteres especiales: # ? ! % $.";
+            const mensajeAdvertenciaContrasenia = "La contraseña debe tener entre 8 y 12 caracteres, y contener al menos una mayúscula, una minúscula, un número, y cualquiera de los siguientes caracteres especiales: # ? ! % $.";
             span.innerHTML = mensajeAdvertenciaContrasenia;
             labelContrasenia.appendChild(span);
             span.style.display = "block"
             span.style.textAlign = "left"
-            span.style.color = "black";
-
+            span.style.color = "rgb(219, 213, 211)";
+            
+            }
         }
 
     
@@ -111,6 +131,7 @@ function mostrarMensajesEmail(mensajes) {
     labelEmail.innerHTML = "";
     mensajes.forEach(mensaje => {
         const span = crearSpan(mensaje);
+        span.id = "mensajeErrorEmail"
         labelEmail.appendChild(span);
 
     })
@@ -120,6 +141,7 @@ function mostrarMensajesContrasenia(mensajes) {
     labelContrasenia.innerHTML = "";
     mensajes.forEach(mensaje => {
         const span = crearSpan(mensaje);
+        span.id = "mensajeErrorContrasenia"
         labelContrasenia.appendChild(span);
     })
 }
