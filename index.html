@@ -40,6 +40,19 @@
    <!-- Estilos -->
    <link rel="stylesheet" href="css/estilo-principal.css">
    <link rel="stylesheet" href="css/estilo-catalogo.css">
+
+<!-- Slider con jQuery -->
+
+<link rel="stylesheet" href="./_core/css/nivo_slider.css">
+    <link rel="stylesheet" href="./_core/css/detalles_slider.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="./_core/js/jquery.nivo.slider.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $('#sliderHome').nivoSlider();
+        });
+    </script>
+
 </head>
 
 <body>
@@ -85,6 +98,18 @@
             </li>
          </ul>
       </nav>
+
+      <section>
+         <article class="slider-wrapper theme-default">
+             <div id="sliderHome" class="nivoSlider"> 
+                 <img src="./assets/img/Diseno_sin_titulo.png" alt="1" /> 
+                 <img src="./assets/img/Diseno_sin_titulo_1.png" alt="2" title="Pelicula UP" /> 
+                 <img src="./assets/img/Eldeportistaperfecto_fte.png" alt="3" data-transition="slideInLeft" /> 
+                 <img src="./assets/img/fantasia.webp" alt="4" title="titulo" />
+                 <img src="./assets/img/1200x600wz.png" alt="5">
+             </div>
+         </article>
+     </section>
 
       <section id="seccion-filtros">
       </section>
