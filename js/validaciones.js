@@ -1,11 +1,12 @@
 const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
-const regexContrasenia = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+// /^[a-zA-Z0-9._.]+\@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+const regexContrasenia = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#!%?$])[A-Za-z\d#!%?$]{8,12}$/;
 const formulario = document.getElementById("formulario-aut");
-const inputEmail = formulario.getElementById("email");
-const inputContrasenia = formulario.getElementById("contrasenia");
-const labelEmail = formulario.getElementById("mensaje-email");
-const labelContrasenia = formulario.getElementById("mensaje-contrasenia");
-const botonRegistrarse = formulario.getElementById("boton");
+const inputEmail = document.getElementById("email");
+const inputContrasenia = document.getElementById("contrasenia");
+const labelEmail = document.getElementById("mensaje-email");
+const labelContrasenia = document.getElementById("mensaje-contrasenia");
+const botonRegistrarse = document.getElementById("boton");
 let errors;
 let mensajesErrorEmail;
 let mensajesErrorContrasenia;
@@ -25,29 +26,68 @@ formulario.addEventListener("submit", (e) => {
     formulario.submit()
 })
 
+
+
 formulario.addEventListener("input", (e) => {
-    if (!inputEmail.value.trim() == "" && !inputContrasenia.value.trim() == "") {
+
+    if (inputEmail.value.trim() !== "" && inputContrasenia.value.trim() !== "") {
         botonRegistrarse.disabled = false;
+        
+    } if (inputEmail.value.trim() !== ""){
+        inputEmail.style.borderColor = "";
+    } if (inputContrasenia.value.trim() !== ""){
+        inputContrasenia.style.borderColor = "";
     }
-})
+    
+    else {
+        if (inputEmail.value.trim() == "") {
+            inputEmail.style.borderColor = "red";
+            
+        }
+        if (inputContrasenia.value.trim() == "") {
+            inputContrasenia.style.borderColor = "red";
+            
+        }
+    }
+
+    const spanViejo = document.getElementById("mensajeAdvertencia");
+    if (spanViejo) {
+        spanViejo.remove();
+
+    }
+    if (inputContrasenia.value.trim() !== "") {
+        
+
+            const span = document.createElement("span");
+            span.id = "mensajeAdvertencia"
+            const mensajeAdvertenciaContrasenia = "La contraseña debe tener entre 8 y 12 caracteres, y ademas contener al menos una mayúscula, una minúscula, un número, y cualquiera de los siguientes caracteres especiales: # ? ! % $.";
+            span.innerHTML = mensajeAdvertenciaContrasenia;
+            labelContrasenia.appendChild(span);
+            span.style.display = "block"
+            span.style.textAlign = "left"
+            span.style.color = "black";
+
+        }
+
+    
+    })
 
 function validacionEmail() {
     if (inputEmail.value.trim() == "") {
         errors = true
         mensajesErrorEmail += "Este campo es obligatorio.-"
+
     }
     else if (!regexEmail.test(inputEmail.value)) {
         errors = true
         mensajesErrorEmail += "El Email no es valido.-"
-    }
 
+    }
     const mensajes = mensajesErrorEmail.split("-");
-    labelEmail.innerHTML = "";
-    mensajes.forEach(mensaje => {
-        const span = crearSpan(mensaje);
-        labelEmail.appendChild(span);
-    })
+    mostrarMensajesEmail(mensajes);
+
 }
+
 
 function validacionContrasenia() {
 
@@ -63,12 +103,25 @@ function validacionContrasenia() {
     }
 
     const mensajes = mensajesErrorContrasenia.split("-");
+    mostrarMensajesContrasenia(mensajes);
+
+}
+
+function mostrarMensajesEmail(mensajes) {
+    labelEmail.innerHTML = "";
+    mensajes.forEach(mensaje => {
+        const span = crearSpan(mensaje);
+        labelEmail.appendChild(span);
+
+    })
+}
+
+function mostrarMensajesContrasenia(mensajes) {
     labelContrasenia.innerHTML = "";
     mensajes.forEach(mensaje => {
         const span = crearSpan(mensaje);
         labelContrasenia.appendChild(span);
     })
-
 }
 
 function crearSpan(mensaje) {
