@@ -1,4 +1,4 @@
-//const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
+
 const regexEmail = /^[a-zA-Z0-9._.]+\@[a-zA-Z0-9.-]+\.(com|net|org)$/;
 const regexContrasenia = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#!%?$])[A-Za-z\d#!%?$]{8,12}$/;
 const formulario = document.getElementById("formulario-aut");
@@ -6,7 +6,7 @@ const inputEmail = document.getElementById("email");
 const inputContrasenia = document.getElementById("contrasenia");
 const labelEmail = document.getElementById("mensaje-email");
 const labelContrasenia = document.getElementById("mensaje-contrasenia");
-const botonRegistrarse = document.getElementById("boton");
+const botonSubmit = document.getElementById("boton");
 let errors;
 let mensajesErrorEmail;
 let mensajesErrorContrasenia;
@@ -34,10 +34,10 @@ formulario.addEventListener("input", (e) => {
 
     
     if (inputEmail.value.trim() !== "" && inputContrasenia.value.trim() !== "") {
-        botonRegistrarse.disabled = false;
+        botonSubmit.disabled = false;
         
     } else if (inputEmail.value.trim() == "" && inputContrasenia.value.trim() == ""){
-        botonRegistrarse.disabled = true;
+        botonSubmit.disabled = true;
     }
 
 
@@ -74,9 +74,9 @@ formulario.addEventListener("input", (e) => {
         spanAnteriorAvertenciaContrasenia.remove();
     }
     
-    if (inputContrasenia.value.trim() !== "") {
+    if (inputContrasenia.value.trim() !== "" && document.getElementById("registrarse")) {
         
-            if (document.getElementById("registrarse")){
+           
             const span = document.createElement("span");
             span.id = "mensajeAdvertencia"
             const mensajeAdvertenciaContrasenia = "La contraseña debe tener entre 8 y 12 caracteres, y contener al menos una mayúscula, una minúscula, un número, y cualquiera de los siguientes caracteres especiales: # ? ! % $.";
@@ -87,8 +87,8 @@ formulario.addEventListener("input", (e) => {
             span.style.color = "rgb(219, 213, 211)";
             
             }
-        }
-
+        
+        
     
     })
 

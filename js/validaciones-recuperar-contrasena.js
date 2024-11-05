@@ -5,7 +5,7 @@ const inputEmail = document.getElementById("input-email");
 const labelEmail = document.getElementById("label-email");
 const botonContinuar = document.getElementById("boton-continuar");
 let error = false;
-let mensajeError = "";
+const mensajeError = "El Email no es valido.";
 
 
 formulario.addEventListener("submit", (e) => {
@@ -42,14 +42,11 @@ function validacionEmail(){
 
     if (inputEmail.value.trim() == ""){
         error = true;
-        mensajeError += ""
-        mostrarMensaje(mensajeError);
     }
 
     else if (!regexEmail.test(inputEmail.value)){
         
         error = true;
-        mensajeError += "El Email no es valido."
         mostrarMensaje(mensajeError);
     }
 }
