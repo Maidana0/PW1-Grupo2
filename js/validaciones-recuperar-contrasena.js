@@ -47,7 +47,6 @@ function validacionEmail(){
     }
 
     else if (!regexEmail.test(inputEmail.value)){
-        
         error = true;
         mensajeError += "El Email no es valido."
         mostrarMensaje(mensajeError);
