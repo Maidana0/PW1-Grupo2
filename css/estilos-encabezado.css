@@ -6,13 +6,14 @@
 }
 
 #encabezado-principal {
-    background-color: inherit;
+    /* background-color: inherit; */
     color: var(--dark-color-texto);
     font-family: "Rubik";
     padding: 10px;
-    display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
+    background: linear-gradient(180deg, var(--dark-color-acento-1) 0%, var(--dark-color-acento-2) 100%);
 }
 
 .nombre-del-sitio {
@@ -29,16 +30,16 @@
     min-height: 40px;
     width: 300px;
     border-radius: 8px;
-    padding: 8px 40px 8px 8px; 
+    padding: 8px 40px 8px 8px;
     outline: none;
     border: none;
     background-color: rgba(0, 0, 0, 0.26);
     color: var(--dark-color-texto);
     transition: ease background-color .2s;
-    background-image: url('../assets/icon/lupaBuscador.svg'); 
+    background-image: url('../assets/icon/lupaBuscador.svg');
     background-repeat: no-repeat;
     background-position: right 10px center;
-    background-size: 20px; 
+    background-size: 20px;
 }
 
 .buscador input:focus,
@@ -49,7 +50,7 @@
 
 .menu-usuario {
     gap: 22px;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .menu-usuario a:hover {
@@ -58,16 +59,18 @@
     text-underline-offset: 5px;
 }
 
-@media (width<=780px){
-    .buscador input{
+@media (width<=780px) {
+    .buscador input {
         width: 100px;
     }
-    .nombre-del-sitio{
+
+    .nombre-del-sitio {
         font-size: 18px;
     }
-    .menu-usuario{
+
+    .menu-usuario {
         font-size: 13px;
         text-wrap: nowrap;
-        
+
     }
 }

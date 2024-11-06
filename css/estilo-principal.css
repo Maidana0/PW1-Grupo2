@@ -25,7 +25,7 @@ a {
    display: flex;
 }
 
-.flex-col{
+.flex-col {
    flex-direction: column;
    align-items: center;
    justify-content: center;
@@ -62,8 +62,20 @@ a {
    text-align: center;
 }
 
+.align-center {
+   align-items: center
+}
+
+.gap-1 {
+   gap: 6px;
+}
+
+.gap-2 {
+   gap: 12px;
+}
+
 #footer-principal {
-   background-color: var(--dark-color-acento-1);
+   background: linear-gradient(360deg, var(--dark-color-acento-1) 0%, var(--dark-color-acento-2) 80%);
    color: var(--light-color-acento-3);
    font-family: "Martel";
    font-size: 12px;
