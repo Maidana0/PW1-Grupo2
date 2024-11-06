@@ -45,7 +45,6 @@ function validacionEmail(){
     }
 
     else if (!regexEmail.test(inputEmail.value)){
-        
         error = true;
         mostrarMensaje(mensajeError);
     }
