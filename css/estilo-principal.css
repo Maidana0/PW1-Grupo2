@@ -18,11 +18,48 @@ body {
 
 a {
    text-decoration: none;
-   color: var(--dark-text-color);
+   color: var(--light-color-acento-2);
 }
 
 .d-flex {
    display: flex;
+}
+
+.flex-col{
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.titulo,
+.sub-titulo {
+   font-family: "Rubik";
+   color: var(--light-color-acento-2);
+   padding: 8px 20px 8px;
+}
+
+.parrafo {
+   color: var(--light-color-acento-3);
+   line-height: 2;
+   font-family: "Roboto Slab";
+   padding: 0 20px 0;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 15px;
+   letter-spacing: 1px;
+}
+
+.titulo {
+   font-size: 40px;
+   margin-bottom: 20px;
+}
+
+.sub-titulo {
+   font-size: 25px;
+}
+
+.text-center {
+   text-align: center;
 }
 
 #footer-principal {
