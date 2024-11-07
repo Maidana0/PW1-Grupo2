@@ -1,16 +1,17 @@
 ﻿import libros from "../../data/libros.json" with { type: 'json' };
 import configuracion from "../../config/configuracion.json" with { type: 'json' };
 
-// Input donde se buscará un libro
-const buscador = document.getElementById("buscador-de-libro")
+
+const buscador = document.getElementById("buscador-de-libro") // Input donde se buscará un libro
 
 const tabCategoriaPorDefecto = document.getElementById("tab-categoria-5"); // Seleccionando categoria por defecto
 
-// Contenedor de los libros y el de las categorias disponibles
-const contenedor = document.getElementById("seccion-categoria")
-const linksCategorias = document.querySelectorAll("button.tab-categoria");
+
+const contenedor = document.getElementById("seccion-categoria") // Contenedor de los libros
+const linksCategorias = document.querySelectorAll("button.tab-categoria"); // Y el de las categorias disponibles
 
 let librosPorMostrar = []
+
 
 linksCategorias.forEach((linkCategoria) => {
    linkCategoria.addEventListener("click", () => {
@@ -35,31 +36,31 @@ linksCategorias.forEach((linkCategoria) => {
    });
 });
 
+
 buscador.addEventListener("keyup", (e) => {
    e.preventDefault()
    contenedor.innerHTML = ""
-   let librosQueCoinciden = librosPorMostrar.filter(
-      (libro) => {
-         // Expresiones para convertir el nombre original a sin mayusculas y remplazar sus vocales con acentos
-         let nombreDelLibro =
-            libro.Nombre.
-               toLowerCase().
-               replace(/[áéíóú]/g, (match) => (
-                  { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u' }[match]
-               ));
+   let librosQueCoinciden = librosPorMostrar.filter((libro) => {
 
-         return nombreDelLibro.includes(e.target.value.toLowerCase())
-      }
-   )
+      // Expresiones para convertir el nombre original a sin mayusculas y remplazar sus vocales con acentos
+      let nombreDelLibro =
+         libro.Nombre
+            .toLowerCase()
+            .replace(/[áéíóú]/g, (match) => (
+               { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u' }[match]
+            ));
+
+      return nombreDelLibro.includes(e.target.value.toLowerCase())
+   })
+
    if (librosQueCoinciden.length > 0) {
       contenedor.innerHTML = ""
       librosQueCoinciden.forEach((item) => crearArticulo(item));
-   } else {
-      librosPorMostrar.forEach((item) => crearArticulo(item));
+      return
    }
+
+   librosPorMostrar.forEach((item) => crearArticulo(item));
 })
-
-
 
 
 
@@ -81,7 +82,6 @@ function crearArticulo(item) {
    </article>
    `
 }
-
 
 
 
