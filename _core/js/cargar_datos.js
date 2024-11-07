@@ -10,7 +10,6 @@ const tabCategoriaPorDefecto = document.getElementById("tab-categoria-5"); // Se
 const contenedor = document.getElementById("seccion-categoria")
 const linksCategorias = document.querySelectorAll("button.tab-categoria");
 
-let categoriaElegida = ""
 let librosPorMostrar = []
 
 linksCategorias.forEach((linkCategoria) => {
@@ -38,8 +37,19 @@ linksCategorias.forEach((linkCategoria) => {
 
 buscador.addEventListener("keyup", (e) => {
    e.preventDefault()
+   contenedor.innerHTML = ""
    let librosQueCoinciden = librosPorMostrar.filter(
-      (libro) => libro.Nombre.toLowerCase().includes(e.target.value.toLowerCase())
+      (libro) => {
+         // Expresiones para convertir el nombre original a sin mayusculas y remplazar sus vocales con acentos
+         let nombreDelLibro =
+            libro.Nombre.
+               toLowerCase().
+               replace(/[áéíóú]/g, (match) => (
+                  { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u' }[match]
+               ));
+
+         return nombreDelLibro.includes(e.target.value.toLowerCase())
+      }
    )
    if (librosQueCoinciden.length > 0) {
       contenedor.innerHTML = ""
