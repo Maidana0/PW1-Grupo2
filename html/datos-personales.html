@@ -59,7 +59,7 @@
                <label class="d-flex label-contenedor">
                   Contraseña
                   <input id="input-contrasenia" type="password" name="password" placeholder="*********" />
-                  <label id="label-contrasenia" for="password" ></label>
+                  <label id="label-contrasenia" for="password"></label>
                </label>
                <button id="boton-contrasenia" type="submit">Cambiar</button>
             </div>
@@ -77,7 +77,7 @@
             </label>
             <label class="d-flex label-contenedor">
                Apellido
-               <input id="input-apellido"type="text" name="lastName" />
+               <input id="input-apellido" type="text" name="lastName" />
                <label id="mensaje-apellido" for="input-apellido"> </label>
             </label>
          </div>
@@ -87,6 +87,8 @@
                Tipo
                <select name="type_document">
                   <option value="D.N.I.">D.N.I.</option>
+                  <option value="CI">CI</option>
+                  <option value="Pasaporte">Pasaporte</option>
                   <option value="C.I."> CI</option>
                   <option value="Pasaporte"> Pasaporte</option>
                </select>
@@ -109,7 +111,8 @@
             </label>
             <label class="d-flex label-contenedor">
                <span>Correo electrónico secundario</span>
-               <input type="text" name="secondary_email" autocomplete="email" placeholder="Opcional"/>
+               <input id="input-emailSecundario" type="text" name="secondary_email" autocomplete="email" />
+               <label id="label-emailSecundario" for="secondary_email"></label>
             </label>
          </div>
 
