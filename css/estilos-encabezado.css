@@ -23,16 +23,17 @@
 
 
 .buscador {
-    margin: auto;
+    margin: 2rem auto;
+    width: 400px;
 }
 
 .buscador input {
+    width: 100%;
     min-height: 40px;
-    width: 300px;
-    border-radius: 8px;
-    padding: 8px 40px 8px 8px;
+    border-radius: 12px;
+    padding: 12px 40px 12px 12px;
     outline: none;
-    border: none;
+    border: solid 1px transparent;
     background-color: rgba(0, 0, 0, 0.26);
     color: var(--dark-color-texto);
     transition: ease background-color .2s;
@@ -40,6 +41,7 @@
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 20px;
+    font-size: 16px;
 }
 
 .buscador input:focus,
@@ -60,8 +62,8 @@
 }
 
 @media (width<=780px) {
-    .buscador input {
-        width: 100px;
+    .buscador {
+        width: 90%;
     }
 
     .nombre-del-sitio {
