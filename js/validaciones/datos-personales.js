@@ -6,10 +6,12 @@ const inputNombre = document.getElementById("input-nombre");
 const inputApellido = document.getElementById("input-apellido");
 const inputDoc = document.getElementById("input-doc");
 const inputTelefono = document.getElementById("input-tel");
+const inputEmailSecundario = document.getElementById("input-emailSecundario");
 const labelNombre = document.getElementById("mensaje-nombre");
 const labelApellido = document.getElementById("mensaje-apellido");
 const labelDoc = document.getElementById("label-numeroDoc");
 const labelTelefono = document.getElementById("label-tel");
+const labelEmailSecundario = document.getElementById("label-emailSecundario");
 const botonDatos = document.getElementById("boton-datos-personales");
 
 error = false;
@@ -17,6 +19,7 @@ const mensajeErrorNombre = "El nombre no es válido";
 const mensajeErrorApellido = "El apellido no es válido";
 const mensajeErrorDocumento = "El documento no es válido";
 const mensajeErrorTelefono = "El telefono no es válido"
+const mensajeErrorEmail = "El email no es válido"
 
 formulario.addEventListener("submit", (e) => {
    e.preventDefault();
@@ -24,6 +27,7 @@ formulario.addEventListener("submit", (e) => {
    validacionApellido();
    validacionDocumento();
    validacionTelefono();
+   valid
    if (error) return null;
    formulario.submit();
 })
@@ -66,7 +70,6 @@ formulario.addEventListener("input", (e) => {
    }
 
 
-
    if (nombreValido && apellidoValido) {
       botonDatos.disabled = false;
       botonDatos.style.cursor = "pointer";
@@ -96,7 +99,7 @@ function validacionNombre() {
       error = true;
    } else if (!regexNombreYApellido.test(inputNombre.value)) {
       error = true;
-      mostrarMensajeNombre(mensajeErrorNombre);
+      mostrarMensajeError(mensajeErrorNombre, labelNombre);
    }
 }
 
@@ -110,7 +113,7 @@ function validacionApellido() {
       error = true;
    } else if (!regexNombreYApellido.test(inputApellido.value)) {
       error = true;
-      mostrarMensajeApellido(mensajeErrorApellido);
+      mostrarMensajeError(mensajeErrorApellido, labelApellido);
    }
 
 }
@@ -126,7 +129,7 @@ function validacionDocumento() {
    }
    if (!regexNumeros.test(inputDoc.value)) {
       error = true;
-      mostrarMensajeDocumento(mensajeErrorDocumento);
+      mostrarMensajeError(mensajeErrorDocumento, labelDoc);
    }
 }
 
@@ -140,51 +143,35 @@ function validacionTelefono() {
       error = true;
    } else if (!regexTelefono.test(inputTelefono.value)) {
       error = true;
-      mostrarMensajeTelefono(mensajeErrorTelefono);
+      mostrarMensajeError(mensajeErrorTelefono, labelTelefono);
+   }
+}
+function validacionEmailSecundario(){
+   if (!regexEmail.test(inputEmailSecundario.value)){
+      mostrarMensajeError(mensajeErrorEmail, labelEmailSecundario);
    }
 }
 
-function mostrarMensajeNombre(mensajeError) {
-   const span = document.createElement("span");
-   span.id = "mensajeErrorNombre";
-   span.innerHTML = mensajeError;
-   labelNombre.appendChild(span);
-   span.style.display = "block";
-   span.style.textAlign = "left";
-   span.style.color = "red";
-   span.style.fontSize = "12px";
-   span.style.position = "absolute";
-}
 
-function mostrarMensajeApellido(mensajeError) {
+function mostrarMensajeError(mensajeError, label){
    const span = document.createElement("span");
-   span.id = "mensajeErrorApellido";
+   if (label == labelNombre){
+      span.id = "mensajeErrorNombre"
+   } 
+   if (label == labelApellido){
+      span.id = "mensajeErrorApellido"
+   } 
+   if (label == labelDoc){
+      span.id = "mensajeErrorDocumento"
+   } 
+   if (label == labelTelefono){
+      span.id = "mensajeErrorTelefono"
+   } 
+   if (label == labelEmailSecundario){
+      span.id = "mensajeErrorEmailSecundario"
+   } 
    span.innerHTML = mensajeError;
-   labelApellido.appendChild(span);
-   span.style.display = "block";
-   span.style.textAlign = "left";
-   span.style.color = "red";
-   span.style.fontSize = "12px";
-   span.style.position = "absolute";
-}
-
-function mostrarMensajeDocumento(mensajeError) {
-   const span = document.createElement("span");
-   span.id = "mensajeErrorDocumento";
-   span.innerHTML = mensajeError;
-   labelDoc.appendChild(span);
-   span.style.display = "block";
-   span.style.textAlign = "left";
-   span.style.color = "red";
-   span.style.fontSize = "12px";
-   span.style.position = "absolute";
-}
-
-function mostrarMensajeTelefono(mensajeError) {
-   const span = document.createElement("span");
-   span.id = "mensajeErrorTelefono";
-   span.innerHTML = mensajeError;
-   labelTelefono.appendChild(span);
+   label.appendChild(span);
    span.style.display = "block";
    span.style.textAlign = "left";
    span.style.color = "red";
