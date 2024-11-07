@@ -36,7 +36,7 @@ formularioEmail.addEventListener("input", (e) =>{
     } 
     else if (inputEmail.value == ""){
         inputEmail.style.borderColor = "red";
-        mensajeDeError += "Ingrese un email";
+        mensajeDeError = "Ingrese un email";
         botonSubmitEmail.disabled = true;
         mostrarMensaje(mensajeDeError);
 
@@ -81,6 +81,7 @@ function mostrarMensajeEmail(mensajeDeError){
     const span =document.createElement("span");
     span.id = "mensajeDeErrorEmail"
     span.style.color = "red";
+    span.style.position = "absolute";
     labelEmail.appendChild(span);
     span.innerHTML = mensajeDeError;
     

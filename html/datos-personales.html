@@ -47,7 +47,7 @@
             <div class="d-flex contenedor-de-inputs">
                <label class="d-flex label-contenedor">
                   Correo electrónico principal
-                  <input id="input-Email" type="text" name="email" value="test@gmail.com" autocomplete="email">
+                  <input id="input-Email" type="text" name="email" placeholder="ejemplo@gmail.com" autocomplete="email">
                   <label id="label-Email" for="email"></label>
                </label>
                <button id="boton-email" type="submit" disabled>Guardar cambios</button>
@@ -58,7 +58,7 @@
             <div class="d-flex contenedor-de-inputs">
                <label class="d-flex label-contenedor">
                   Contraseña
-                  <input id="input-contrasenia" type="password" name="password" value="123456789" />
+                  <input id="input-contrasenia" type="password" name="password" placeholder="*********" />
                   <label id="label-contrasenia" for="password" ></label>
                </label>
                <button id="boton-contrasenia" type="button" disabled>Cambiar</button>
@@ -67,16 +67,18 @@
          </form>
       </div>
 
-      <form id="fomulario-datos-personales" class="d-flex formulario">
+      <form id="formulario-datos-personales" class="d-flex formulario">
          <h2>Mis datos personales</h2>
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                Nombre
-               <input type="text" name="name" pattern="[A-Za-z]+" autocomplete="name" disabled />
+               <input id="input-nombre" type="text" name="name" />
+               <label id="mensaje-nombre" for="input-nombre"> </label>
             </label>
             <label class="d-flex label-contenedor">
                Apellido
-               <input type="text" name="lastName" pattern="[A-Za-z]+" autocomplete="cc-family-name" disabled />
+               <input id="input-apellido"type="text" name="lastName" />
+               <label id="mensaje-apellido" for="input-apellido"> </label>
             </label>
          </div>
 
@@ -107,7 +109,7 @@
             </label>
          </div>
 
-         <button type="submit">Guardar cambios</button>
+         <button id="boton-datos-personales" type="submit" disabled>Guardar cambios</button>
       </form>
 
    </main>
