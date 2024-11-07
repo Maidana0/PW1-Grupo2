@@ -14,6 +14,7 @@ let mensajeDeError = "";
 
 formularioEmail.addEventListener("submit", (e) =>{
     e.preventDefault();
+    error = false;
     validacionEmail();
     if (error) return null
     formularioEmail.submit()
@@ -58,8 +59,6 @@ function validacionEmail (){
 
 
     if (inputEmail.value.trim() == ""){
-        
-        //botonSubmitEmail.style.backgroundColor = "rgb(235, 182, 212)";
 
     } else if (!regexEmail.test(inputEmail.value)){
         error= true;

@@ -35,12 +35,13 @@ formulario.addEventListener("input", (e) => {
     
     if (inputEmail.value.trim() !== "" && inputContrasenia.value.trim() !== "") {
         botonSubmit.disabled = false;
+        botonSubmit.style.cursor ="pointer";
         
-    } else if (inputEmail.value.trim() == "" && inputContrasenia.value.trim() == ""){
+        
+    } else {
         botonSubmit.disabled = true;
+        botonSubmit.style.cursor ="not-allowed";
     }
-
-
 
     if (inputEmail.value.trim() !== ""){
         inputEmail.style.borderColor = "";
@@ -77,14 +78,14 @@ formulario.addEventListener("input", (e) => {
     if (inputContrasenia.value.trim() !== "" && document.getElementById("registrarse")) {
         
            
-            const span = document.createElement("span");
-            span.id = "mensajeAdvertencia"
+            const pElement = document.createElement("p");
+            pElement.id = "mensajeAdvertencia"
             const mensajeAdvertenciaContrasenia = "La contraseña debe tener entre 8 y 12 caracteres, y contener al menos una mayúscula, una minúscula, un número, y cualquiera de los siguientes caracteres especiales: # ? ! % $.";
-            span.innerHTML = mensajeAdvertenciaContrasenia;
-            labelContrasenia.appendChild(span);
-            span.style.display = "block"
-            span.style.textAlign = "left"
-            span.style.color = "rgb(219, 213, 211)";
+            pElement.innerHTML = mensajeAdvertenciaContrasenia;
+            labelContrasenia.appendChild(pElement);
+            pElement.style.display = "block"
+            pElement.style.textAlign = "left"
+            pElement.style.color = "rgb(219, 213, 211)";
             
             }
         

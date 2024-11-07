@@ -1,40 +1,53 @@
 ﻿import libros from "../../data/libros.json" with { type: 'json' };
 import configuracion from "../../config/configuracion.json" with { type: 'json' };
 
-const tabCategoria1 = document.getElementById("tab-categoria-1");
+const tabCategoriaPorDefecto = document.getElementById("tab-categoria-5");
+const contenedor = document.getElementById("seccion-categoria")
 
-let linksCategorias = document.querySelectorAll("a.tab-categoria");
+let linksCategorias = document.querySelectorAll("button.tab-categoria");
 
 linksCategorias.forEach((linkCategoria) => {
    linkCategoria.addEventListener("click", () => {
-      const elementosFiltrados = libros.filter((libro) => libro.Categoria === linkCategoria.innerText)
+      contenedor.innerHTML = ""
 
+      // Remover la clase "active" de todos los links de categoría (para que no aparezcan muchos en blanco)
+      linksCategorias.forEach((link) => link.classList.remove("active"))
+
+      // Agregar la clase active para la categoria activa
+      linkCategoria.classList.add("active")
+
+      // Obtenemos los libros filtrados por categoria
+      const elementosFiltrados = libros.filter((libro) => {
+         // Si la categoria es "Todas las Categorías" devolvemos todos los libros
+         if (linkCategoria.innerText === "Todas las Categorías") return true
+         // Si no, devolvemos los libros que coincidan con la categoria seleccionada
+         return libro.Categoria === linkCategoria.innerText
+      })
+
+      // Agregamos contenido al contenedor por cada elemento (libro) de la categoría seleccionada
       elementosFiltrados.forEach((item) => {
-         const { Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
-         const articuloContenedor = document.querySelector("article." + Id.split("-")[1])
+         const { Id, Nombre, Autor, Portada } = item;
+         contenedor.innerHTML += `
+         <article
+             id="categoria00-item01" 
+            class="articulo-categoria item01" 
+            onClick="window.location.href='/html/detalles-del-libro.html?libro=${Id}'"
+         >
+            <header class="header-articulo">
+               <img class="item-valor-portada" width="249px" height="355px" loading="lazy"
+                  src="${Portada}" alt="${Nombre}">
+               <p class="item-valor-autor">${Autor}</p>
+            </header>
+            <p class="item-valor-nombre">${Nombre}</p>
 
-         // Es para que el nombre completo se vea en el tooltip del navegador
-         articuloContenedor.getElementsByClassName("item-valor-nombre")[0].setAttribute("title", Nombre)
-         // ---
-         articuloContenedor.getElementsByClassName("item-valor-nombre")[0].innerText = Nombre
-         articuloContenedor.getElementsByClassName("item-valor-autor")[0].innerText = Autor
-         articuloContenedor.getElementsByClassName("item-valor-portada")[0].src = Portada
-         articuloContenedor.getElementsByClassName("item-valor-portada")[0].alt = Nombre
-         articuloContenedor.getElementsByClassName("item-valor-descripcion")[0].innerText = Descripcion
-         articuloContenedor.getElementsByClassName("item-valor-rating")[0].innerText = Rating
-
-         const personalizados = Object.keys(item).filter(key => key.startsWith("personalizado_"))
-
-         personalizados.forEach((personalizado, index) => {
-            articuloContenedor.getElementsByClassName(`item-campo-personalizado_${index + 1}`)[0].innerText = personalizado.split(".")[1]
-            articuloContenedor.getElementsByClassName(`item-valor-personalizado_${index + 1}`)[0].innerText = item[personalizado]
-         })
-
-         articuloContenedor.id = Id;
+         </article>
+         `
       });
    });
 });
 
+
+// Por defecto, vamos a mostrar la categoria de Fantasia y Ciencia Ficción
 if (configuracion["modo-test-prod"] === "prod") {
-   tabCategoria1.click();
+   tabCategoriaPorDefecto.click();
 };
