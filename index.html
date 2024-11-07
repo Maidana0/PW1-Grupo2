@@ -40,12 +40,13 @@
    <!-- Estilos -->
    <link rel="stylesheet" href="css/estilo-principal.css">
    <link rel="stylesheet" href="css/estilo-catalogo.css">
+   <link rel="stylesheet" href="./css/libros/estilo-spiner.css">
+   <link rel="stylesheet" href="./css/estilos-buscador.css">
 
    <!-- Slider con jQuery -->
 
    <link rel="stylesheet" href="./_core/css/slick.css">
    <link rel="stylesheet" href="./_core/css/slick-theme.css">
-   <link rel="stylesheet" href="./css/libros/estilo-spiner.css">
    <script src="./_core/js/jquery-3.5.1.min.js"></script>
    <script src="./_core/js/slick.min.js"></script>
    <script>
@@ -129,15 +130,14 @@
       </nav>
 
       <section id="seccion-filtros">
-         <form class="buscador">
-            <input type="text" name="search" id="search" placeholder="Filtrar por nombre del libro">
-         </form>
+         <input type="text" id="buscador-de-libro" name="search" id="search" placeholder="Filtrar por nombre del libro"
+            autocomplete="off">
       </section>
 
       <section id="seccion-categoria" class="d-flex">
-            <div class="loader-content" style="margin: 5rem auto;">
-                <div class="spinner"></div>
-            </div>
+         <div class="loader-content" style="margin: 5rem auto;">
+            <div class="spinner"></div>
+         </div>
       </section>
 
    </main>

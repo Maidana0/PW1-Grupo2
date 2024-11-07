@@ -1,0 +1,33 @@
+
+#buscador-de-libro {
+    display: block;
+    margin: 2rem auto;
+    width: 400px;
+    min-height: 50px;
+    border-radius: 12px;
+    padding: 14px 40px 14px 18px;
+    outline: none;
+    border: solid 1px transparent;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: var(--dark-color-texto);
+    transition: ease background-color .2s;
+    background-image: url('../assets/icon/lupaBuscador.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px;
+    font-size: 16px;
+}
+
+#buscador-de-libro:focus,
+#buscador-de-libro:hover {
+    border: solid 1px var(--dark-color-acento-3);
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+
+
+@media (width<=780px) {
+    #buscador-de-libro {
+        width: 90%;
+    }
+}
