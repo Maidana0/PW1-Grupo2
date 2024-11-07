@@ -27,13 +27,14 @@ const mensajeErrorFechaNac = "La fecha no es válida";
 
 formulario.addEventListener("submit", (e) => {
    e.preventDefault();
+   error = false;
    validacionNombre();
    validacionApellido();
    validacionDocumento();
    validacionTelefono();
    validacionEmailSecundario();
    validacionFechaNacimiento();
-   if (error) return null;
+   if (error) return null
    formulario.submit();
 })
 
