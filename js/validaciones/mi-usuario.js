@@ -14,6 +14,7 @@ let mensajeDeError = "";
 
 formularioEmail.addEventListener("submit", (e) =>{
     e.preventDefault();
+    error = false;
     validacionEmail();
     if (error) return null
     formularioEmail.submit()
@@ -34,11 +35,17 @@ formularioEmail.addEventListener("input", (e) =>{
         botonSubmitEmail.disabled = false;
         inputEmail.style.borderColor = "";
     } 
-    else if (inputEmail.value == ""){
+
+    const mensajeAnterior = document.getElementById("mensajeDeErrorEmail");
+    if (mensajeAnterior){
+        mensajeAnterior.remove();
+    }
+
+    if (inputEmail.value == ""){
         inputEmail.style.borderColor = "red";
         mensajeDeError = "Ingrese un email";
         botonSubmitEmail.disabled = true;
-        mostrarMensaje(mensajeDeError);
+        mostrarMensajeEmail(mensajeDeError);
 
     }
 
@@ -52,8 +59,6 @@ function validacionEmail (){
 
 
     if (inputEmail.value.trim() == ""){
-        
-        //botonSubmitEmail.style.backgroundColor = "rgb(235, 182, 212)";
 
     } else if (!regexEmail.test(inputEmail.value)){
         error= true;
@@ -81,6 +86,7 @@ function mostrarMensajeEmail(mensajeDeError){
     const span =document.createElement("span");
     span.id = "mensajeDeErrorEmail"
     span.style.color = "red";
+    span.style.fontSize = "12px"
     span.style.position = "absolute";
     labelEmail.appendChild(span);
     span.innerHTML = mensajeDeError;

@@ -61,7 +61,7 @@
                   <input id="input-contrasenia" type="password" name="password" placeholder="*********" />
                   <label id="label-contrasenia" for="password" ></label>
                </label>
-               <button id="boton-contrasenia" type="button" disabled>Cambiar</button>
+               <button id="boton-contrasenia" type="submit">Cambiar</button>
             </div>
             <button type="submit" hidden>Guardar cambios</button>
          </form>
@@ -85,13 +85,14 @@
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                Tipo
-               <select name="type_document" disabled>
+               <select name="type_document">
                   <option value="D.N.I.">D.N.I.</option>
                </select>
             </label>
             <label class="d-flex label-contenedor">
                <span>Número de documento</span>
-               <input type="text" name="document" autocomplete="off" disabled />
+               <input id="input-doc" type="text" name="document" autocomplete="off" />
+               <label id="label-numeroDoc" for="document"></label>
             </label>
             <label class="d-flex label-contenedor">
                <span>Fecha de nacimiento</span>
@@ -101,7 +102,8 @@
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                <span>Teléfono celular</span>
-               <input type="tel" name="tel" autocomplete="tel" />
+               <input id="input-tel" type="tel" name="tel" autocomplete="tel" />
+               <label id="label-tel" for="tel"></label>
             </label>
             <label class="d-flex label-contenedor">
                <span>Correo electrónico secundario</span>
@@ -109,7 +111,7 @@
             </label>
          </div>
 
-         <button id="boton-datos-personales" type="submit" disabled>Guardar cambios</button>
+         <button id="boton-datos-personales" type="submit">Guardar cambios</button>
       </form>
 
    </main>
