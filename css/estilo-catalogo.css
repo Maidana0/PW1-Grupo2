@@ -38,9 +38,14 @@
    color: var(--dark-color-texto);
    font-family: "Roboto Slab";
    justify-content: space-evenly;
-   width: 46%;
+   gap: 5px;
    border-radius: 12px;
    border: solid 1px var(--dark-color-acento-3);
+   width: 250px;
+   padding-bottom: 10px;
+   transition: transform 0.3s ease-in-out;
+   cursor: pointer;
+   overflow: hidden;
 }
 
 .header-articulo {
@@ -48,20 +53,27 @@
 }
 
 .item-valor-portada {
-   width: 250px;
+   width: 100%;
    height: 355px;
+   aspect-ratio: 30/41;
    object-fit: fill;
    border-top-left-radius: 12px;
+   border-top-right-radius: 12px;
 }
 
 .item-valor-nombre {
-   font-size: 30px;
+   font-size: 18px;
    font-weight: 600;
-   overflow-x: hidden;
-   text-wrap: nowrap;
-   text-overflow: ellipsis;
    font-family: 'Rubik';
-   padding: 8px;
+   padding: 0 10px;
+   width: 100%;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   text-overflow: ellipsis;
+   line-height: 1.2em;
+   max-height: calc(1.35em * 2);
 }
 
 .item-valor-autor {
@@ -70,75 +82,17 @@
    font-family: 'Martel';
    font-weight: 800;
    font-size: small;
-}
-
-.item-valor-descripcion {
-   position: absolute;
-   width: 45.8%;
-   min-height: 355px;
-   padding: 30px;
-   border-radius: 12px 12px 0 0;
-   font-size: 15.5px;
-   color: var(--light-color-acento-1);
-   line-height: 3ch;
-   transition: all ease .35s;
-   cursor: pointer;
-}
-
-.item-valor-descripcion {
-   opacity: 0;
-}
-
-.contenido {
-   /* CAJA QUE CONTIENE LA CAJA DE LA IMAGEN Y EL CONTENIDO (detalles) */
-}
-
-.detalle-articulo {
-   width: calc(100% - 250px);
-   flex-direction: column;
-   justify-content: center;
-   padding: 20px;
-}
-
-.detalle-articulo p {
-   margin-bottom: 12px;
+   margin: 5px 0;
 }
 
 .articulo-categoria:hover {
-   && .item-valor-descripcion {
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.9);
-   }
-}
+   transform: scale(1.03);
+   box-shadow: 0px 0px 12px var(--dark-color-acento-1);
 
+}
 
 @media (width <=980px) {
    #lista-categorias {
       width: 100%;
-   }
-
-   .articulo-categoria {
-      width: 300px;
-   }
-
-   .item-valor-descripcion {
-      width: 298px;
-      height: 320px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-   }
-
-   .contenido {
-      flex-direction: column;
-   }
-
-   .detalle-articulo{
-      display: none;
-   }
-
-   .item-valor-portada {
-      width: 298px;
-      object-fit: cover;
-      border-top-right-radius: 12px;
    }
 }

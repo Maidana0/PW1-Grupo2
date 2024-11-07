@@ -1,5 +1,26 @@
+.volver {
+    color: var(--dark-color-texto);
+    font-family: "Martel";
+    font-weight: 600;
+    padding: 3px;
+    width: 60px;
+    display: block;
+    font-size: 12px;
+    margin: .5rem 1rem 0;
+    text-underline-offset: 1px;
+}
+
+.volver:hover {
+    text-decoration: underline;
+    color: var(--light-color-acento-1);
+}
+
+.titulo-pequeño {
+    margin-bottom: 2rem;
+}
+
 #titulo-de-pagina {
-    padding: 1.5rem;
+    padding: 0 1.5rem 1rem;
     color: var(--dark-color-acento-3);
     font-size: 30px;
     font-family: "Rubik";
@@ -20,7 +41,7 @@
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 1.5;
-    margin: 2rem 10px;
+    margin: 0 10px;
 }
 
 .parrafos-pequeños p {
@@ -65,11 +86,17 @@
     display: block;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color: var(--dark-color-acento-1);
     margin-top: 8px;
-    color: var(--dark-color-texto);
     font-weight: 800;
     font-family: "Martel";
+    color: var(--light-color-acento-3);
+    background-color: var(--dark-color-acento-1);
+    transition: all ease .2s;
+}
+
+.ver-mas:hover {
+    background-color: var(--light-color-acento-1);
+    color: var(--dark-color-acento-2);
 }
 
 @media(width < 768px) {

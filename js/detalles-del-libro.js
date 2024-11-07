@@ -1,6 +1,7 @@
 import libros from "../../data/libros.json" with { type: 'json' };
 
 const titulo = document.getElementById("titulo-de-pagina")
+const categoria = document.getElementById("categoria-del-libro")
 const contenedor = document.getElementById("detalles-del-libro")
 const idDelLibroBuscado = document.location.search.split("=")[1]
 
@@ -18,9 +19,9 @@ if (!libro) {
     titulo.innerText = "El libro que busca no existe en nuestra base de datos"
     contenedor.innerHTML = "<img src='../assets/img/page-not-found.webp' alt='not-found' width='390px' height='280px' style='border-radius: 18px; margin: 2rem auto;'/>"
 } else {
-
     document.title = libro.Nombre;
     titulo.innerText = libro.Nombre;
+    categoria.innerText = libro.Categoria
     contenedor.innerHTML = crearArticulo(libro)
 
 }
@@ -34,7 +35,7 @@ function buscandoElLibro(id) {
 
 function crearArticulo(libro) {
     const { Nombre, Categoria, Autor, Descripcion, Referencia, Portada, Rating, "personalizado_1.ISBN": ISBN, "personalizado_2.Fecha Publicacion": FechaPublicacion, "personalizado_3.Editorial": Editorial, "personalizado_4.Paginas": Paginas, "personalizado_5.Presentacion": Presentacion } = libro
-    
+
     let parrafos = ""
     Descripcion.split(".").forEach((texto) => {
         if (texto.length > 0) {
@@ -51,8 +52,7 @@ function crearArticulo(libro) {
             </div>
 
             <div class="segunda-col">
-                <h2 class="sub-titulo text-right">${Categoria}</h2>
-               
+                            
                 <div class="d-flex flex-col parrafos-pequeños">
                     <div class="d-flex justify-between">
                         <p><strong class="rotulo">Fecha de Publicación:</strong> ${FechaPublicacion}</p>
