@@ -67,7 +67,7 @@ formulario.addEventListener("input", (e) => {
 
 
 
-   if (nombreValido && apellidoValido) {
+   if (nombreValido && apellidoValido && telefonoValido && contraseniaValida) {
       botonDatos.disabled = false;
       botonDatos.style.cursor = "pointer";
    } else {
