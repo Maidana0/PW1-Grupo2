@@ -21,8 +21,9 @@
 
 #titulo-de-pagina {
     padding: 0 1.5rem 1rem;
-    color: var(--dark-color-acento-3);
-    font-size: 30px;
+    margin: 1.5rem 0;
+    color: var(--light-color-acento-3);
+    font-size: 35px;
     font-family: "Rubik";
 }
 
@@ -47,6 +48,10 @@
 .parrafos-pequeños p {
     width: 49%;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    line-height: 2em;
 }
 
 .rotulo {
@@ -121,5 +126,13 @@
 
     .descripcion {
         width: 100%;
+    }
+
+    .ver-mas {
+        margin-bottom: 2.5rem;
+    }
+
+    .parrafos-pequeños p {
+        text-wrap: wrap;
     }
 }
