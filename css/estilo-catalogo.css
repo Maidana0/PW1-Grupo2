@@ -13,18 +13,19 @@
 
 .tab-categoria {
    font-family: "Martel";
+   color: var(--light-color-acento-3);
    font-size: 16px;
    display: block;
-   border: 3px solid;
-   border-color: var(--dark-color-acento-1);
+   border: none;
    border-radius: 0.3em;
    padding: 15px;
    background-color: var(--dark-color-acento-1);
+   transition: all ease-in 0.2s;
 }
 
 .tab-categoria:hover {
    color: var(--dark-color-acento-2);
-   text-decoration: underline;
+   background-color: var(--dark-color-acento-3);
 }
 
 #seccion-categoria {
@@ -89,6 +90,12 @@
    transform: scale(1.03);
    box-shadow: 0px 0px 12px var(--dark-color-acento-1);
 
+}
+
+
+.active {
+   color: var(--dark-color-acento-2);
+   background-color: var(--light-color-fondo);
 }
 
 @media (width <=980px) {
