@@ -12,14 +12,18 @@ const labelApellido = document.getElementById("mensaje-apellido");
 const labelDoc = document.getElementById("label-numeroDoc");
 const labelTelefono = document.getElementById("label-tel");
 const labelEmailSecundario = document.getElementById("label-emailSecundario");
+const inputFechaNac = document.getElementById("input-fecha-nacimiento");
+const labelFechaNac = document.getElementById("label-fechaNacimiento");
 const botonDatos = document.getElementById("boton-datos-personales");
+
 
 error = false;
 const mensajeErrorNombre = "El nombre no es válido";
 const mensajeErrorApellido = "El apellido no es válido";
 const mensajeErrorDocumento = "El documento no es válido";
-const mensajeErrorTelefono = "El telefono no es válido"
-const mensajeErrorEmail = "El email no es válido"
+const mensajeErrorTelefono = "El telefono no es válido";
+const mensajeErrorEmailSecundario = "El email no es válido";
+const mensajeErrorFechaNac = "La fecha no es válida";
 
 formulario.addEventListener("submit", (e) => {
    e.preventDefault();
@@ -27,7 +31,8 @@ formulario.addEventListener("submit", (e) => {
    validacionApellido();
    validacionDocumento();
    validacionTelefono();
-   valid
+   validacionEmailSecundario();
+   validacionFechaNacimiento();
    if (error) return null;
    formulario.submit();
 })
@@ -36,13 +41,17 @@ formulario.addEventListener("input", (e) => {
 
    const nombreValido = inputNombre.value.trim() !== "";
    const apellidoValido = inputApellido.value.trim() !== "";
-   const contraseniaValida = inputDoc.value.trim() !== "";
+   const documentoValido = inputDoc.value.trim() !== "";
    const telefonoValido = inputTelefono.value.trim() !== "";
+   const fechaValida = inputFechaNac.value.trim() !== "";
+   
 
    eliminarMensajeDeError("mensajeErrorNombre");
    eliminarMensajeDeError("mensajeErrorApellido");
    eliminarMensajeDeError("mensajeErrorDocumento");
    eliminarMensajeDeError("mensajeErrorTelefono");
+   eliminarMensajeDeError("mensajeErrorEmailSecundario");
+   eliminarMensajeDeError("mensajeErrorFechaNac");
 
    if (nombreValido) {
       inputNombre.style.borderColor = "";
@@ -55,7 +64,8 @@ formulario.addEventListener("input", (e) => {
    } else {
       inputApellido.style.borderColor = "red";
    }
-   if (contraseniaValida){
+
+   if (documentoValido){
       inputDoc.style.borderColor = "";
    }else{
       inputDoc.style.borderColor = "red";
@@ -69,8 +79,14 @@ formulario.addEventListener("input", (e) => {
       
    }
 
+   if(fechaValida){
+      inputFechaNac.style.borderColor = "";
+   }else{
+      inputFechaNac.style.borderColor = "red";
+      
+   }
 
-   if (nombreValido && apellidoValido) {
+   if (nombreValido && apellidoValido && documentoValido && telefonoValido && fechaValida) {
       botonDatos.disabled = false;
       botonDatos.style.cursor = "pointer";
    } else {
@@ -90,11 +106,6 @@ function eliminarMensajeDeError(id){
 
 
 function validacionNombre() {
-   const mensajeAnterior = document.getElementById("mensajeErrorNombre");
-   if (mensajeAnterior) {
-      mensajeAnterior.remove();
-   }
-
    if (inputNombre.value.trim() == "") {
       error = true;
    } else if (!regexNombreYApellido.test(inputNombre.value)) {
@@ -104,10 +115,6 @@ function validacionNombre() {
 }
 
 function validacionApellido() {
-   const mensajeAnterior = document.getElementById("mensajeErrorApellido");
-   if (mensajeAnterior) {
-      mensajeAnterior.remove();
-   }
 
    if (inputApellido.value.trim() == "") {
       error = true;
@@ -119,26 +126,16 @@ function validacionApellido() {
 }
 
 function validacionDocumento() {
-   const mensajeAnteriorDoc = document.getElementById("mensajeErrorDocumento");
-   if (mensajeAnteriorDoc) {
-      mensajeAnteriorDoc.remove();
-   }
-   if (inputDoc.value.trim() !== "") {
+   if (inputDoc.value.trim() == "") {
       error = true;
       
-   }
-   if (!regexNumeros.test(inputDoc.value)) {
+   }else if (!regexNumeros.test(inputDoc.value)) {
       error = true;
       mostrarMensajeError(mensajeErrorDocumento, labelDoc);
    }
 }
 
 function validacionTelefono() {
-   const mensajeAnterior = document.getElementById("mensajeErrorTelefono");
-   if (mensajeAnterior) {
-      mensajeAnterior.remove();
-   }
-
    if (inputTelefono.value.trim() == "") {
       error = true;
    } else if (!regexTelefono.test(inputTelefono.value)) {
@@ -147,10 +144,28 @@ function validacionTelefono() {
    }
 }
 function validacionEmailSecundario(){
-   if (!regexEmail.test(inputEmailSecundario.value)){
-      mostrarMensajeError(mensajeErrorEmail, labelEmailSecundario);
+ 
+
+   if (inputEmailSecundario.value.trim() !== "" && !regexEmail.test(inputEmailSecundario.value)){
+      error = true;
+      mostrarMensajeError(mensajeErrorEmailSecundario, labelEmailSecundario);
    }
 }
+
+function validacionFechaNacimiento(){
+
+   const anioActual = new Date().getFullYear();
+   const anioNacimiento = new Date(inputFechaNac.value).getFullYear();
+
+if(anioNacimiento > anioActual - 16){
+   error = true;
+   mostrarMensajeError(mensajeErrorFechaNac, labelFechaNac);
+}
+
+}
+
+
+
 
 
 function mostrarMensajeError(mensajeError, label){
@@ -170,6 +185,9 @@ function mostrarMensajeError(mensajeError, label){
    if (label == labelEmailSecundario){
       span.id = "mensajeErrorEmailSecundario"
    } 
+   if(label == labelFechaNac){
+      span.id = "mensajeErrorFechaNac"
+   }
    span.innerHTML = mensajeError;
    label.appendChild(span);
    span.style.display = "block";
