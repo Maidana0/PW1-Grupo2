@@ -18,37 +18,10 @@ if (!libro) {
     titulo.innerText = "El libro que busca no existe en nuestra base de datos"
     contenedor.innerHTML = "<img src='../assets/img/page-not-found.webp' alt='not-found' width='390px' height='280px' style='border-radius: 18px; margin: 2rem auto;'/>"
 } else {
-    const { Nombre, Categoria, Autor, Descripcion, Referencia, Portada, Rating, "personalizado_1.ISBN": ISBN, "personalizado_2.Fecha Publicacion": FechaPublicacion, "personalizado_3.Editorial": Editorial, "personalizado_4.Paginas": Paginas, "personalizado_5.Presentacion": Presentacion } = libro
 
-    document.title = Nombre;
-    titulo.innerText = Nombre;
-    contenedor.innerHTML = `
-            <div>
-                <img src="${Portada}"
-                    alt="${Nombre}" />
-                <h3 class="titulo-pequeño">${Autor}</h3>
-            </div>
-
-            <div>
-                <h2 class="sub-titulo text-right">${Categoria}</h2>
-                <p>${Descripcion}</p>
-
-                <div class="d-flex flex-cool">
-                    <div class="d-flex justify-between">
-                        <p>Fecha de Publicación: ${FechaPublicacion}</p>
-                        <p>(Rating)</p>
-                    </div>
-                    <div class="d-flex justify-between">
-                        <p>Editorial: ${Editorial}</p>
-                        <p>Páginas: ${Paginas}</p>
-                    </div>
-                    <div class="d-flex justify-between">
-                        <p>ISBM: ${ISBN}</p>
-                        <p>Presentación: ${Presentacion}</p>
-                    </div>
-                </div>
-            </div>
-    `
+    document.title = libro.Nombre;
+    titulo.innerText = libro.Nombre;
+    contenedor.innerHTML = crearArticulo(libro)
 
 }
 
@@ -57,4 +30,49 @@ if (!libro) {
 function buscandoElLibro(id) {
     const libroBuscado = libros.find(libro => libro.Id === id)
     return libroBuscado
+}
+
+function crearArticulo(libro) {
+    const { Nombre, Categoria, Autor, Descripcion, Referencia, Portada, Rating, "personalizado_1.ISBN": ISBN, "personalizado_2.Fecha Publicacion": FechaPublicacion, "personalizado_3.Editorial": Editorial, "personalizado_4.Paginas": Paginas, "personalizado_5.Presentacion": Presentacion } = libro
+    
+    let parrafos = ""
+    Descripcion.split(".").forEach((texto) => {
+        if (texto.length > 0) {
+            parrafos += `<p class="parrafo">${texto}.</p>`
+        }
+    })
+
+    return `
+            <div class="primer-col  text-center">
+                <img src="${Portada}"
+                    alt="${Nombre}" class="imagen-portada"/>
+                <h3 class="titulo-pequeño">${Autor}</h3>
+                <a href="${Referencia}" target="_blank" class="ver-mas text-center">Ver más</a>
+            </div>
+
+            <div class="segunda-col">
+                <h2 class="sub-titulo text-right">${Categoria}</h2>
+               
+                <div class="d-flex flex-col parrafos-pequeños">
+                    <div class="d-flex justify-between">
+                        <p><strong class="rotulo">Fecha de Publicación:</strong> ${FechaPublicacion}</p>
+                        <p><strong class="rotulo">Clasificación:</strong> ${Rating}</p>
+                    </div>
+                    <div class="d-flex justify-between">
+                        <p><strong class="rotulo">Editorial:</strong> ${Editorial}</p>
+                        <p><strong class="rotulo">Páginas:</strong> ${Paginas}</p>
+                    </div>
+                    <div class="d-flex justify-between">
+                        <p><strong class="rotulo">ISBM:</strong> ${ISBN}</p>
+                        <p><strong class="rotulo">Presentación:</strong> ${Presentacion}</p>
+                    </div>
+                </div>
+
+                <div class="descripcion"> 
+                    <p class="parrafo"> <strong class="rotulo">Descripción:</strong> </p>
+                    ${parrafos}
+                </div>
+
+            </div>
+    `
 }
