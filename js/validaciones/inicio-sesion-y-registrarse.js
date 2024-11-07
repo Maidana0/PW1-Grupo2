@@ -35,12 +35,13 @@ formulario.addEventListener("input", (e) => {
     
     if (inputEmail.value.trim() !== "" && inputContrasenia.value.trim() !== "") {
         botonSubmit.disabled = false;
+        botonSubmit.style.cursor ="pointer";
         
-    } else if (inputEmail.value.trim() == "" && inputContrasenia.value.trim() == ""){
+        
+    } else {
         botonSubmit.disabled = true;
+        botonSubmit.style.cursor ="not-allowed";
     }
-
-
 
     if (inputEmail.value.trim() !== ""){
         inputEmail.style.borderColor = "";
