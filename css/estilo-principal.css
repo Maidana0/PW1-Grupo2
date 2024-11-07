@@ -141,3 +141,19 @@ button {
       font-size: 12px;
    }
 }
+
+
+
+body::-webkit-scrollbar {
+   width: 10px;
+   scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-track {
+   background: var(--dark-color-acento-2);
+}
+
+body::-webkit-scrollbar-thumb {
+   background-color: var(--dark-color-acento-1);
+   border-radius: 12px;
+}
