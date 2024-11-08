@@ -59,7 +59,7 @@ buscador.addEventListener("keyup", (e) => {
       return
    }
    contenedor.innerHTML = `
-   <p class="sub-titulo text-center" style="background: rgba(0, 0, 0, 0.452); padding: 6rem 4rem; border-radius: 12px;">
+   <p class="sub-titulo text-center" style="background: rgba(0, 0, 0, 0.452); padding: 6rem 4rem; max-width:90%; border-radius: 12px;">
     😞 No se encontraron resultados para "${e.target.value}".
     </p>
    `
@@ -73,7 +73,7 @@ function crearArticulo(item) {
    <article
        id="categoria00-item01" 
       class="articulo-categoria item01" 
-      onClick="window.location.href='/html/detalles-del-libro.html?libro=${Id}'"
+      onClick="window.location.href='html/detalles-del-libro.html?libro=${Id}'"
    >
       <header class="header-articulo">
          <img class="item-valor-portada" width="249px" height="355px" loading="lazy"
