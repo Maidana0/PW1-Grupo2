@@ -58,12 +58,14 @@
     position: relative;
     top: 0;
     left: 0;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    /* display: block; */
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
 }
 
 .slick-track:before,
@@ -84,9 +86,9 @@
 .slick-slide {
     display: none;
     float: left;
-    min-height: 100%;
     overflow-y: hidden;
-    
+    width: 100%;
+    min-height: 100%;
 }
 
 [dir='rtl'] .slick-slide {
@@ -94,8 +96,9 @@
 }
 
 .slick-slide img {
-    display: block;
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .slick-slide.slick-loading img {
@@ -132,4 +135,7 @@
         height: 40vh;
     }
 
+    .slick-slide img {
+        object-fit: contain;
+    }
 }
