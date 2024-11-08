@@ -18,13 +18,12 @@
 
 <body>
    <header id="encabezado-principal" class="d-flex">
-      <img src="../assets/img/logo.png" class="logo" alt="logo">
-      <a class="nombre-del-sitio" href="../index.html">
-         La casa de los libros
-      </a>
-      <form class="buscador" action="">
-         <input type="text">
-      </form>
+      <div class="d-flex align-center gap-2">
+         <img src="../assets/img/logo.png" class="logo" alt="logo">
+         <a class="nombre-del-sitio" href="/">
+            La casa de los libros
+         </a>
+      </div>
 
       <div class="d-flex menu-usuario">
          <a href="./iniciar-sesion.html">
@@ -40,72 +39,83 @@
    <main>
       <h1>Tu Perfil</h1>
 
-      <div class="d-flex formulario">
+      <div id="formulario-datos-MiUsuario" class="d-flex formulario">
          <h2>Mi usuario</h2>
 
-         <form class="d-flex items-center">
+         <form id="fomulario-email" class="d-flex items-center">
             <div class="d-flex contenedor-de-inputs">
                <label class="d-flex label-contenedor">
                   Correo electrónico principal
-                  <input type="email" name="email" value="test@gmail.com" autocomplete="email">
+                  <input id="input-Email" type="text" name="email" placeholder="ejemplo@gmail.com" autocomplete="email">
+                  <label id="label-Email" for="email"></label>
                </label>
-               <button type="submit">Guardar cambios</button>
+               <button id="boton-email" type="submit" disabled>Guardar cambios</button>
             </div>
          </form>
 
-         <form class="d-flex items-center">
+         <form id="formulario-contrasenia" class="d-flex items-center">
             <div class="d-flex contenedor-de-inputs">
                <label class="d-flex label-contenedor">
                   Contraseña
-                  <input type="password" name="password" value="123456789" disabled />
+                  <input id="input-contrasenia" type="password" name="password" placeholder="*********" />
+                  <label id="label-contrasenia" for="password"></label>
                </label>
-               <button type="button">Cambiar</button>
+               <button id="boton-contrasenia" type="submit">Cambiar</button>
             </div>
             <button type="submit" hidden>Guardar cambios</button>
          </form>
       </div>
 
-      <form class="d-flex formulario">
+      <form id="formulario-datos-personales" class="d-flex formulario">
          <h2>Mis datos personales</h2>
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                Nombre
-               <input type="text" name="name" pattern="[A-Za-z]+" autocomplete="name" disabled />
+               <input placeholder="Carlos" id="input-nombre" type="text" name="name" />
+               <label id="mensaje-nombre" for="input-nombre"> </label>
             </label>
             <label class="d-flex label-contenedor">
                Apellido
-               <input type="text" name="lastName" pattern="[A-Za-z]+" autocomplete="cc-family-name" disabled />
+               <input placeholder="Gonzalez" id="input-apellido" type="text" name="lastName" />
+               <label id="mensaje-apellido" for="input-apellido"> </label>
             </label>
          </div>
 
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                Tipo
-               <select name="type_document" disabled>
+               <select name="type_document">
                   <option value="D.N.I.">D.N.I.</option>
+                  <option value="CI">CI</option>
+                  <option value="Pasaporte">Pasaporte</option>
                </select>
             </label>
             <label class="d-flex label-contenedor">
                <span>Número de documento</span>
-               <input type="text" name="document" autocomplete="off" disabled />
+               <input placeholder="11 222 333" id="input-doc" type="text" name="document" autocomplete="off" />
+               <label id="label-numeroDoc" for="document"></label>
             </label>
             <label class="d-flex label-contenedor">
                <span>Fecha de nacimiento</span>
-               <input type="date" name="birthdate" />
+               <input id="input-fecha-nacimiento" type="date" name="birthdate" />
+               <label id="label-fechaNacimiento" for="input-fecha-nacimiento"></label>
             </label>
          </div>
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                <span>Teléfono celular</span>
-               <input type="tel" name="tel" autocomplete="tel" />
+               <input placeholder="11 2233 4455" id="input-tel" type="tel" name="tel" autocomplete="tel" />
+               <label id="label-tel" for="tel"></label>
             </label>
             <label class="d-flex label-contenedor">
-               <span>Correo electrónico secundario</span>
-               <input type="text" name="secondary_email" autocomplete="email" />
+               <span title="Correo electrónico secundario">Correo electrónico secundario</span>
+               <input id="input-emailSecundario" type="text" name="secondary_email" autocomplete="email"
+                  placeholder="ejemplo@gmail.com (opcional)" />
+               <label id="label-emailSecundario" for="input-emailSecundario"></label>
             </label>
          </div>
 
-         <button type="submit">Guardar cambios</button>
+         <button id="boton-datos-personales" type="submit">Guardar cambios</button>
       </form>
 
    </main>
@@ -143,6 +153,8 @@
          </span>
       </div>
    </footer>
+   <script src="../js/validaciones/mi-usuario.js"></script>
+   <script src="../js/validaciones/datos-personales.js"></script>
 </body>
 
 </html>

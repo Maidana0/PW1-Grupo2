@@ -13,18 +13,18 @@
    <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
 
    <link rel="stylesheet" href="../css/estilo-principal.css">
-   <link rel="stylesheet" href="../css/estilos-recuperar-contrasena.css">
+   <link rel="stylesheet" href="../css/estilos-formularios.aut.css">
 </head>
 
 <body>
    <header id="encabezado-principal" class="d-flex">
-      <img src="../assets/img/logo.png" class="logo" alt="logo">
-      <a class="nombre-del-sitio" href="../index.html">
-         La casa de los libros
-      </a>
-      <form class="buscador" action="">
-         <input type="text">
-      </form>
+      <div class="d-flex align-center gap-2">
+         <img src="../assets/img/logo.png" class="logo" alt="logo">
+         <a class="nombre-del-sitio" href="/">
+            La casa de los libros
+         </a>
+      </div>
+
 
       <div class="d-flex menu-usuario">
          <a href="./iniciar-sesion.html">
@@ -36,16 +36,17 @@
       </div>
    </header>
    <main>
-      <form action="" class="d-flex formulario">
+      <form id="formulario" action="" class="d-flex formulario">
          <h1>¿Olvidaste tu contraseña?</h1>
          <p>Ingresa el email con el que te registraste y te enviaremos los pasos a seguir para generar una nueva
             Contraseña </p>
          <div class="d-flex contenedor-de-inputs">
-            <input type="email" name="email" autocomplete="email" placeholder="Correo Electronico*" required>
+            <input id="input-email" type="text" name="email" autocomplete="email" placeholder="Correo Electronico*">
+            <label id="label-email" for="email"></label>
          </div>
-         <p> <small> Al continuar, confirmo que he leído y aceptado los <a> términos y condiciones </a>
-               y las <a> políticas de privacidad </a> de La casa de los libros</small> </p>
-         <button>Continuar</button>
+         <p> <small> Al continuar, confirmo que he leído y aceptado los <a href="#"> términos y condiciones </a>
+               y las <a href="#"> políticas de privacidad </a> de La casa de los libros</small> </p>
+         <button id="boton-continuar" disabled>Continuar</button>
       </form>
    </main>
    <footer id="footer-principal" class="d-flex">
@@ -81,6 +82,7 @@
          </span>
       </div>
    </footer>
+   <script src="../js/validaciones/recuperar-contrasena.js"></script>
 </body>
 
 </html>

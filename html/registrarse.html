@@ -13,20 +13,17 @@
    <link rel="apple-touch-icon" sizes="256x256" href="../assets/icon/logo-256.ico">
 
    <link rel="stylesheet" href="../css/estilo-principal.css">
-   <link rel="stylesheet" href="../css/estilos-registrarse.css">
+   <link rel="stylesheet" href="../css/estilos-formularios.aut.css">
 </head>
 
 <body>
    <header id="encabezado-principal" class="d-flex">
-      <img src="../assets/img/logo.png" class="logo" alt="logo">
-      <a class="nombre-del-sitio" href="../index.html">
-         La casa de los libros
-      </a>
-      <form class="buscador" action="">
-         <input type="text">
-      </form>
-      <!-- <h1>ENCABEZADO PRINCIPAL, PRIMERA LINEA --- LOGO+BUSCADOR+ICONOS</h1>
-      <h1>ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</h1> -->
+      <div class="d-flex align-center gap-2">
+         <img src="../assets/img/logo.png" class="logo" alt="logo">
+         <a class="nombre-del-sitio" href="/">
+            La casa de los libros
+         </a>
+      </div>
 
       <div class="d-flex menu-usuario">
          <a href="./iniciar-sesion.html">
@@ -40,15 +37,16 @@
    </header>
    <main>
 
-      <form class="d-flex formulario">
-         <h1> Registrarse </h1>
+      <form id="formulario-aut" class="d-flex formulario">
+         <h1 id="registrarse"> Registrarse </h1>
          <div class="d-flex contenedor-de-inputs">
-            <input name="email" autocomplete="email" type="email" required placeholder="Correo electrónico*">
-
-            <input name="password" autocomplete="off" type="password" minlength="6" required placeholder="Contraseña*">
+            <input id="email" name="email" autocomplete="email" type="text" placeholder="Correo electrónico*">
+            <label id="mensaje-email" for="email"> </label>
+            <input id="contrasenia" name="password" autocomplete="off" type="password" placeholder="Contraseña*">
+            <label id="mensaje-contrasenia" for="contrasenia"> </label>
          </div>
 
-         <button> Registrate </button>
+         <button id="boton" disabled> Registrate </button>
 
          <p> ¿Ya tenés una cuenta?<a href="iniciar-sesion.html"> Iniciar sesión </a></p>
 
@@ -90,6 +88,7 @@
          </span>
       </div>
    </footer>
+   <script src="../js/validaciones/inicio-sesion-y-registrarse.js"></script>
 </body>
 
 </html>

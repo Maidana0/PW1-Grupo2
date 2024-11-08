@@ -12,6 +12,7 @@ main {
 .items-center {
     align-items: center;
     justify-content: center;
+    
 }
 
 .formulario {
@@ -108,4 +109,10 @@ input {
     .formulario button[type="submit"] {
         margin: auto;
     }
+}
+
+
+.formulario button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
