@@ -84,6 +84,9 @@
    font-weight: 800;
    font-size: small;
    margin: 5px 0;
+   overflow: hidden;
+   text-wrap: nowrap;
+   text-overflow: ellipsis;
 }
 
 .articulo-categoria:hover {

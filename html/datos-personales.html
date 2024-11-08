@@ -18,13 +18,12 @@
 
 <body>
    <header id="encabezado-principal" class="d-flex">
-      <img src="../assets/img/logo.png" class="logo" alt="logo">
-      <a class="nombre-del-sitio" href="../index.html">
-         La casa de los libros
-      </a>
-      <form class="buscador" action="">
-         <input type="text">
-      </form>
+      <div class="d-flex align-center gap-2">
+         <img src="../assets/img/logo.png" class="logo" alt="logo">
+         <a class="nombre-del-sitio" href="/">
+            La casa de los libros
+         </a>
+      </div>
 
       <div class="d-flex menu-usuario">
          <a href="./iniciar-sesion.html">
@@ -72,12 +71,12 @@
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                Nombre
-               <input id="input-nombre" type="text" name="name" />
+               <input placeholder="Carlos" id="input-nombre" type="text" name="name" />
                <label id="mensaje-nombre" for="input-nombre"> </label>
             </label>
             <label class="d-flex label-contenedor">
                Apellido
-               <input id="input-apellido" type="text" name="lastName" />
+               <input placeholder="Gonzalez" id="input-apellido" type="text" name="lastName" />
                <label id="mensaje-apellido" for="input-apellido"> </label>
             </label>
          </div>
@@ -93,24 +92,25 @@
             </label>
             <label class="d-flex label-contenedor">
                <span>Número de documento</span>
-               <input id="input-doc" type="text" name="document" autocomplete="off" />
+               <input placeholder="11 222 333" id="input-doc" type="text" name="document" autocomplete="off" />
                <label id="label-numeroDoc" for="document"></label>
             </label>
             <label class="d-flex label-contenedor">
                <span>Fecha de nacimiento</span>
-               <input id = "input-fecha-nacimiento" type="date" name="birthdate" />
+               <input id="input-fecha-nacimiento" type="date" name="birthdate" />
                <label id="label-fechaNacimiento" for="input-fecha-nacimiento"></label>
             </label>
          </div>
          <div class="d-flex contenedor-de-inputs">
             <label class="d-flex label-contenedor">
                <span>Teléfono celular</span>
-               <input id="input-tel" type="tel" name="tel" autocomplete="tel" />
+               <input placeholder="11 2233 4455" id="input-tel" type="tel" name="tel" autocomplete="tel" />
                <label id="label-tel" for="tel"></label>
             </label>
             <label class="d-flex label-contenedor">
-               <span>Correo electrónico secundario</span>
-               <input id="input-emailSecundario" type="text" name="secondary_email" autocomplete="email" placeholder="*Opcional*" />
+               <span title="Correo electrónico secundario">Correo electrónico secundario</span>
+               <input id="input-emailSecundario" type="text" name="secondary_email" autocomplete="email"
+                  placeholder="ejemplo@gmail.com (opcional)" />
                <label id="label-emailSecundario" for="input-emailSecundario"></label>
             </label>
          </div>

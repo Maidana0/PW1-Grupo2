@@ -1,11 +1,11 @@
 .volver {
     color: var(--dark-color-texto);
     font-family: "Martel";
-    font-weight: 600;
+    font-weight: 700;
     padding: 3px;
-    width: 60px;
+    width: fit-content;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     margin: .5rem 1rem 0;
     text-underline-offset: 1px;
 }
@@ -21,8 +21,9 @@
 
 #titulo-de-pagina {
     padding: 0 1.5rem 1rem;
-    color: var(--dark-color-acento-3);
-    font-size: 30px;
+    margin: 1.5rem 0;
+    color: var(--light-color-acento-3);
+    font-size: 35px;
     font-family: "Rubik";
 }
 
@@ -47,6 +48,10 @@
 .parrafos-pequeños p {
     width: 49%;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    line-height: 2em;
 }
 
 .rotulo {
@@ -74,7 +79,7 @@
 }
 
 .descripcion {
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right bottom, var(--dark-color-acento-1) 0%, var(--dark-color-acento-2) 50%, var(--dark-color-acento-1) 100%);
     padding: 20px;
     margin: auto;
     margin-top: 30px;
@@ -121,5 +126,13 @@
 
     .descripcion {
         width: 100%;
+    }
+
+    .ver-mas {
+        margin-bottom: 2.5rem;
+    }
+
+    .parrafos-pequeños p {
+        text-wrap: wrap;
     }
 }
