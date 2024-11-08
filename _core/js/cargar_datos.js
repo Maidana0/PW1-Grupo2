@@ -50,7 +50,7 @@ buscador.addEventListener("keyup", (e) => {
                { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u' }[match]
             ));
 
-      return nombreDelLibro.includes(e.target.value.toLowerCase())
+      return nombreDelLibro.includes(e.target.value.trim().toLowerCase())
    })
 
    if (librosQueCoinciden.length > 0) {
@@ -58,8 +58,11 @@ buscador.addEventListener("keyup", (e) => {
       librosQueCoinciden.forEach((item) => crearArticulo(item));
       return
    }
-
-   librosPorMostrar.forEach((item) => crearArticulo(item));
+   contenedor.innerHTML = `
+   <p class="sub-titulo text-center" style="background: rgba(0, 0, 0, 0.452); padding: 6rem 4rem; border-radius: 12px;">
+    😞 No se encontraron resultados para "${e.target.value}".
+    </p>
+   `
 })
 
 
