@@ -64,7 +64,7 @@ formulario.addEventListener("input", (e) => {
         if (inputContrasenia.value.trim() == "") {
             inputContrasenia.style.borderColor = "red";
             if (mensajeAnteriorErrorContrasenia) {
-                mensajeAnteriorErrorContrasenia.remove();
+                labelContrasenia.remove();
             }
         }
     }
