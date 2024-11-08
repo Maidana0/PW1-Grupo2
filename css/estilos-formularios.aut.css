@@ -28,6 +28,7 @@
 .formulario a {
     text-decoration: underline;
     color: var(--dark-color-hipervinculo);
+
 }
 
 .formulario button {
@@ -46,6 +47,7 @@
 
 }
 
-.contenedor-de-inputs input:invalid {
-    border-color: rgb(234, 8, 8);
+.formulario button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
