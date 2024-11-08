@@ -63,17 +63,17 @@ function crearArticulo(libro) {
                             ${Editorial}
                         </p>
 
-                        <p>
+                        <p title="${Paginas}">
                             <strong class="rotulo">Páginas:</strong> 
                             ${Paginas}
                         </p>
                     </div>
                     <div class="d-flex justify-between">
-                        <p>
+                        <p title="${ISBN}">
                             <strong class="rotulo">ISBM:</strong> 
                             ${ISBN}
                         </p>
-                        <p>
+                        <p title="${Presentacion}">
                             <strong class="rotulo">Presentación:</strong> 
                             ${Presentacion}
                         </p>
